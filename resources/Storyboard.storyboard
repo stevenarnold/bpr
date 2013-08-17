@@ -296,6 +296,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzE-kX-y8k">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tap_settings:" destination="jqG-GI-Q3x" eventType="touchUpInside" id="xVr-Lg-wLZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -304,10 +317,12 @@
                             <constraint firstItem="tC8-f2-fkS" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="129" id="53G-V6-cnd"/>
                             <constraint firstAttribute="trailing" secondItem="ein-eg-u9b" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8f5-8v-Nbh"/>
                             <constraint firstItem="a6M-Z2-wac" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DfN-nj-G4d"/>
+                            <constraint firstItem="JzE-kX-y8k" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="JUi-T3-B52"/>
                             <constraint firstAttribute="trailing" secondItem="OQ5-ej-M3R" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Lmv-Om-jg6"/>
                             <constraint firstItem="OQ5-ej-M3R" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WXd-kU-KwG"/>
                             <constraint firstAttribute="trailing" secondItem="IFy-Ax-uiM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZKt-2b-tdF"/>
                             <constraint firstItem="ein-eg-u9b" firstAttribute="leading" secondItem="lt4-qw-3Uf" secondAttribute="leading" type="default" id="bd0-yT-tGM"/>
+                            <constraint firstAttribute="trailing" secondItem="JzE-kX-y8k" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cEE-vk-QlZ"/>
                             <constraint firstAttribute="trailing" secondItem="a6M-Z2-wac" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cXe-zf-buz"/>
                             <constraint firstItem="IFy-Ax-uiM" firstAttribute="top" secondItem="ein-eg-u9b" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fT9-9t-m2E"/>
                             <constraint firstAttribute="trailing" secondItem="lt4-qw-3Uf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gvm-UX-O7S"/>
@@ -344,6 +359,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFw-uo-FBl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="P8D-0K-X8n"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tap When Ready to Breathe In">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -365,9 +383,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkI-a2-Nrx">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="cQw-L8-ZLd"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -379,16 +394,12 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ube-WM-lMB">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="MJZ-95-I1K"/>
                                     <constraint firstAttribute="width" constant="97" id="OpL-Ru-Jrg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIM-7r-0Gg">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DzW-m6-O0m"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -407,6 +418,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C96-XX-ufR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tap_settings:" destination="VIz-mu-Yhb" eventType="touchUpInside" id="ZFJ-fQ-CKu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -415,14 +439,15 @@
                             <constraint firstItem="cIM-7r-0Gg" firstAttribute="top" secondItem="ube-WM-lMB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7ez-YM-PQp"/>
                             <constraint firstItem="G0n-7m-zL6" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="129" id="8gW-Wf-PUS"/>
                             <constraint firstItem="cjI-2k-a5F" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BbL-vT-AZQ"/>
+                            <constraint firstItem="C96-XX-ufR" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="G6U-CR-DPx"/>
                             <constraint firstAttribute="trailing" secondItem="EFw-uo-FBl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JbM-id-Idf"/>
-                            <constraint firstItem="ube-WM-lMB" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="125" id="PE5-2k-2Bm"/>
                             <constraint firstAttribute="trailing" secondItem="cjI-2k-a5F" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QPM-eA-leR"/>
                             <constraint firstItem="EFw-uo-FBl" firstAttribute="leading" secondItem="cLd-hP-tDA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RjI-TD-oIh"/>
                             <constraint firstAttribute="trailing" secondItem="cIM-7r-0Gg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U6Z-Ir-aVm"/>
                             <constraint firstItem="eXH-YC-VvS" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="85" id="VaF-3Z-rJx"/>
                             <constraint firstItem="eXH-YC-VvS" firstAttribute="centerX" secondItem="cjI-2k-a5F" secondAttribute="centerX" type="default" id="Vpr-bW-XnI"/>
                             <constraint firstItem="1hK-9I-2m5" firstAttribute="baseline" secondItem="cIM-7r-0Gg" secondAttribute="baseline" type="default" id="XS2-M2-Pym"/>
+                            <constraint firstAttribute="trailing" secondItem="C96-XX-ufR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="abx-Hw-lNN"/>
                             <constraint firstAttribute="bottom" secondItem="EFw-uo-FBl" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aw7-q1-lnq"/>
                             <constraint firstItem="DkI-a2-Nrx" firstAttribute="top" secondItem="cIM-7r-0Gg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bTU-Wc-kFk"/>
                             <constraint firstAttribute="trailing" secondItem="DkI-a2-Nrx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dct-cI-Vlm"/>
@@ -455,11 +480,14 @@
                 <relationship kind="action" name="bpm"/>
                 <relationship kind="action" name="initialize_state"/>
                 <relationship kind="action" name="load_settings"/>
+                <relationship kind="action" name="numberOfComponentsInPickerView:"/>
                 <relationship kind="action" name="save_settings"/>
+                <relationship kind="action" name="settingsViewControllerDidEnd:"/>
                 <relationship kind="action" name="start_timer"/>
                 <relationship kind="action" name="still_collecting_initial_data"/>
                 <relationship kind="action" name="tap_in_out_button:"/>
                 <relationship kind="action" name="tap_reset:"/>
+                <relationship kind="action" name="tap_settings:"/>
                 <relationship kind="action" name="toggle_breathing_state"/>
                 <relationship kind="action" name="update_status_text"/>
                 <relationship kind="action" name="viewDidLoad"/>

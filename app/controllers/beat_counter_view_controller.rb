@@ -11,6 +11,7 @@ class BeatCounterViewController < UIViewController
 
   ib_action :tap_in_out_button
   ib_action :tap_reset
+  ib_action :tap_settings
 
   attr_accessor :in_sound, :out_sound, :rain_sound, :binaural_sound
 
@@ -83,7 +84,12 @@ class BeatCounterViewController < UIViewController
     initialize_state
     puts "state initialized"
     @delegate = UIApplication.sharedApplication.delegate
+    puts "delegate = #{@delegate}"
     @sb = @delegate.sb
+    puts "@delegate.sb = #{@delegate.sb}"
+    @settings = @delegate.settings
+    @settings.delegate = self
+    @settings.showDoneButton = true
     @window = UIApplication.sharedApplication.keyWindow
     
     # prefsVC = mainDelegate.prefsVC;
@@ -156,9 +162,13 @@ class BeatCounterViewController < UIViewController
     UIView.setAnimationDuration(0.0)
     UIView.setAnimationTransition(UIViewAnimationTransitionFlipFromRight,
                 forView:@window, cache:true)
-    view.removeFromSuperview
-    @window.addSubview(@timer_vc.view)
+    show_view(view, @timer_vc)
     UIView.commitAnimations
+  end
+
+  def show_view(old_view, new_vc)
+    old_view.removeFromSuperview
+    @window.addSubview(new_vc.view)
   end
 
   # Actions
@@ -191,8 +201,56 @@ class BeatCounterViewController < UIViewController
   end
 
   def tap_reset sender
-    puts "woo hoo!"
     initialize_state
+  end
+
+  def tap_settings sender
+    puts "settings 01: @settings = #{@settings}"
+    puts "settings 02"
+    puts "settings 03"
+    puts "settings 04"
+    @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
+    puts "settings 04.5"
+    @view = view
+    show_view(view, @navigationController)
+    # @navigationController.pushViewController(@settings, animated:true)
+    puts "settings 05"
+  end
+
+  def settingsViewControllerDidEnd(sender)
+    puts "Goodbye, World!"
+  end
+
+  # Picker delegate methods
+  AMBIENT_SOUNDS = %w[Rain Ocean Forest]
+
+  def pickerView(pickerView, didSelectRow:row, inComponent:component)
+    # Handle the selection
+    puts "Selected row #{row}"
+  end
+ 
+  # tell the picker how many rows are available for a given component
+  def pickerView(pickerView, numberOfRowsInComponent:component)
+    AMBIENT_SOUNDS.length
+  end
+   
+  # tell the picker how many components it will have
+  def numberOfComponentsInPickerView(pickerView)
+    1
+  end
+   
+  # tell the picker the title for a given component
+  def pickerView(pickerView, titleForRow:row, forComponent:component)
+    if pickerView.tag == @delegate.ambient
+      AMBIENT_SOUNDS[row]
+    elsif pickerView.tag = @delegate.binaural
+      BINAURAL_SOUNDS[row]
+    end
+  end
+   
+  # tell the picker the width of each row for a given component
+  def pickerView(pickerView, widthForComponent:component)
+   sectionWidth = 300
   end
 end
 

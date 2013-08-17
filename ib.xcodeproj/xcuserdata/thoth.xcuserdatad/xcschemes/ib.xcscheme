@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D52F4285C7394BAE86750734"
+               BlueprintIdentifier = "0EC4CA46E8844E1994E773E5"
                BuildableName = "libib.a"
                BlueprintName = "ib"
                ReferencedContainer = "container:ib.xcodeproj">

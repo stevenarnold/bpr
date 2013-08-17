@@ -1,20 +1,30 @@
 # -*- coding: utf-8 -*-
 $:.unshift("/Library/RubyMotion/lib")
-require 'motion/project'
+require 'rubygems'
+require 'motion/project/template/ios'
 require 'motion-settings-bundle'
 require 'bundler' 
 Bundler.require
+require 'motion-cocoapods'
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'Blood Pressure Reducer'
   app.frameworks += ['AVFoundation']
+  app.pods do
+    pod 'InAppSettingsKit'
+  end
 end
 
 Motion::SettingsBundle.setup do |app|
   # Actual app prefs
+  app.title "Binaural Volume", key: "binauralVolumeTitle", default: ""
   app.slider "Binaural Volume", key: "binauralVolume", default: 50, min: 1, max: 100
+  app.title "Ambient Program", key: "ambientProgramTitle", default: ""
+  app.text "Ambient Program", key: "ambientProgram", default: ""
+  app.title "Ambient Volume", key: "ambientVolumeTitle", default: ""
   app.slider "Ambient Volume", key: "ambientVolume", default: 50, min: 1, max: 100
+  app.title "Tone Volume", key: "toneVolumeTitle", default: ""
   app.slider "Tone Volume", key: "toneVolume", default: 50, min: 1, max: 100
 
   # A text field. Allows configuration of a string.
