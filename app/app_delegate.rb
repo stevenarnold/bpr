@@ -2,7 +2,7 @@ class AppDelegate
   extend IB
 
   outlet :window, UIWindow
-  attr_accessor :sb, :settings, :ambient, :binaural
+  attr_accessor :sb, :settings, :ambient, :binaural, :navigationController
 
   def initialize_sound
     # sessionCategory = kAudioSessionCategory_MediaPlayback;
@@ -34,6 +34,22 @@ class AppDelegate
     puts "as02"
   end
 
+  # Might need to implement 'dismiss' to capture the actual settings in our app
+  def settingsViewControllerDidEnd(sender)
+    @bc_controller.show_view(@navigationController.view, @bc_controller)
+  end
+
+  def settingDidChange(notification)
+    puts "Settings changed"
+# - (void)settingDidChange:(NSNotification*)notification {
+# if ([notification.object isEqual:@"AutoConnect"]) {
+# IASKAppSettingsViewController *activeController = self.tabBarController.selectedIndex ? self.tabAppSettingsViewController : self.appSettingsViewController;
+# BOOL enabled = (BOOL)[[notification.userInfo objectForKey:@"AutoConnect"] intValue];
+# [activeController setHiddenKeys:enabled ? nil : [NSSet setWithObjects:@"AutoConnectLogin", @"AutoConnectPassword", nil] animated:YES];
+# }
+# }
+  end
+
   def application(application, didFinishLaunchingWithOptions:launchOptions)
     @ambient = 0
     @binaural = 1
@@ -51,6 +67,7 @@ class AppDelegate
     textfield = cell.contentView.subviews[1]  # .viewWithTag(@ambient)
     textfield.inputView = get_ambient_picker
     initialize_sound
+    @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
     @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
   end
 end

@@ -80,6 +80,7 @@ class BeatCounterViewController < UIViewController
   end
 
   def viewDidLoad
+    super
     puts "loading beat view"
     initialize_state
     puts "state initialized"
@@ -88,15 +89,15 @@ class BeatCounterViewController < UIViewController
     @sb = @delegate.sb
     puts "@delegate.sb = #{@delegate.sb}"
     @settings = @delegate.settings
-    @settings.delegate = self
+    @settings.delegate = @delegate
     @settings.showDoneButton = true
+    @navigationController = @delegate.navigationController
     @window = UIApplication.sharedApplication.keyWindow
     
     # prefsVC = mainDelegate.prefsVC;
     load_settings
     initialize_sounds
     puts "beat viewDidLoad done"
-    super
   end
 
   def applicationWillTerminate(notification)
@@ -206,19 +207,10 @@ class BeatCounterViewController < UIViewController
 
   def tap_settings sender
     puts "settings 01: @settings = #{@settings}"
-    puts "settings 02"
-    puts "settings 03"
-    puts "settings 04"
-    @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
-    puts "settings 04.5"
     @view = view
     show_view(view, @navigationController)
     # @navigationController.pushViewController(@settings, animated:true)
     puts "settings 05"
-  end
-
-  def settingsViewControllerDidEnd(sender)
-    puts "Goodbye, World!"
   end
 
   # Picker delegate methods
