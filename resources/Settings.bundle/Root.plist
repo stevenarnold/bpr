@@ -29,16 +29,6 @@
 			<string>PSSliderSpecifier</string>
 		</dict>
 		<dict>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>Key</key>
-			<string>ambientProgramTitle</string>
-			<key>Title</key>
-			<string>Ambient Program</string>
-			<key>Type</key>
-			<string>PSTitleValueSpecifier</string>
-		</dict>
-		<dict>
 			<key>AutocapitalizationType</key>
 			<string>Sentences</string>
 			<key>AutocorrectionType</key>

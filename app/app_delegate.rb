@@ -39,8 +39,8 @@ class AppDelegate
     @bc_controller.show_view(@navigationController.view, @bc_controller)
   end
 
-  def settingDidChange(notification)
-    puts "Settings changed"
+  def settingDidChange
+    alert("notice", "Settings changed")
 # - (void)settingDidChange:(NSNotification*)notification {
 # if ([notification.object isEqual:@"AutoConnect"]) {
 # IASKAppSettingsViewController *activeController = self.tabBarController.selectedIndex ? self.tabAppSettingsViewController : self.appSettingsViewController;
@@ -50,7 +50,19 @@ class AppDelegate
 # }
   end
 
+  def alert(title, message)
+    UIAlertView.alloc.initWithTitle(title, 
+                                    message: message,
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK",
+                                    otherButtonTitles: nil).show
+  end
+
   def application(application, didFinishLaunchingWithOptions:launchOptions)
+    NSNotificationCenter.defaultCenter.addObserver(self, 
+                                                   selector: "settingDidChange", 
+                                                   name: "kAppSettingChanged",
+                                                   object: nil)
     @ambient = 0
     @binaural = 1
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
@@ -59,7 +71,7 @@ class AppDelegate
     @settings = IASKAppSettingsViewController.alloc.initWithNibName("IASKAppSettingsView", bundle: nil)
     puts "@settings = #{@settings}"
     puts "@settings.view = #{@settings.view}"
-    indexPath = NSIndexPath.indexPathForRow(3, inSection:0)
+    indexPath = NSIndexPath.indexPathForRow(2, inSection:0)
     puts "indexPath = #{indexPath}"
     puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(0)}"
     puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(1)}"

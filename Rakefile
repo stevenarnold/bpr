@@ -20,8 +20,7 @@ Motion::SettingsBundle.setup do |app|
   # Actual app prefs
   app.title "Binaural Volume", key: "binauralVolumeTitle", default: ""
   app.slider "Binaural Volume", key: "binauralVolume", default: 50, min: 1, max: 100
-  app.title "Ambient Program", key: "ambientProgramTitle", default: ""
-  app.text "Ambient Program", key: "ambientProgram", default: ""
+  app.text "Ambient Program", key: "ambientProgram", default: ""  # Converts to a picker
   app.title "Ambient Volume", key: "ambientVolumeTitle", default: ""
   app.slider "Ambient Volume", key: "ambientVolume", default: 50, min: 1, max: 100
   app.title "Tone Volume", key: "toneVolumeTitle", default: ""
