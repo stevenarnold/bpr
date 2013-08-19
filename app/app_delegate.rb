@@ -50,6 +50,10 @@ class AppDelegate
 # }
   end
 
+  def userDefaultsDidChange
+    App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
+  end
+
   def alert(title, message)
     UIAlertView.alloc.initWithTitle(title, 
                                     message: message,
@@ -63,6 +67,10 @@ class AppDelegate
                                                    selector: "settingDidChange", 
                                                    name: "kAppSettingChanged",
                                                    object: nil)
+    App.notification_center.addObserver(self,
+                                        selector: "userDefaultsDidChange",
+                                        name: NSUserDefaultsDidChangeNotification,
+                                        object: NSUserDefaults.standardUserDefaults)
     @ambient = 0
     @binaural = 1
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
@@ -71,6 +79,9 @@ class AppDelegate
     @settings = IASKAppSettingsViewController.alloc.initWithNibName("IASKAppSettingsView", bundle: nil)
     puts "@settings = #{@settings}"
     puts "@settings.view = #{@settings.view}"
+    initialize_sound
+    @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
+    @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
     indexPath = NSIndexPath.indexPathForRow(2, inSection:0)
     puts "indexPath = #{indexPath}"
     puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(0)}"
@@ -78,8 +89,5 @@ class AppDelegate
     cell = @settings.tableView.cellForRowAtIndexPath(indexPath)
     textfield = cell.contentView.subviews[1]  # .viewWithTag(@ambient)
     textfield.inputView = get_ambient_picker
-    initialize_sound
-    @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
-    @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
   end
 end
