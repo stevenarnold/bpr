@@ -1,5 +1,8 @@
 module SoundHelper
   # Sound management
+
+  attr_accessor :tone_volume, :binaural_volume, :ambient_volume
+
   def play(sound)
     puts "sound = #{sound}"
     if sound.isPlaying
@@ -17,10 +20,12 @@ module SoundHelper
   end
 
   def play_in_sound
+    in_sound.volume = @tone_volume
     play(in_sound)
   end
 
   def play_out_sound
+    out_sound.volume = @tone_volume
     play(out_sound)
   end
 

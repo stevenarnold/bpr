@@ -2,7 +2,8 @@ class AppDelegate
   extend IB
 
   outlet :window, UIWindow
-  attr_accessor :sb, :settings, :ambient, :binaural, :navigationController
+  attr_accessor :sb, :settings, :ambient, :binaural, :navigationController,
+                :bc_controller
 
   def initialize_sound
     # sessionCategory = kAudioSessionCategory_MediaPlayback;
@@ -39,34 +40,26 @@ class AppDelegate
     @bc_controller.show_view(@navigationController.view, @bc_controller)
   end
 
-  def settingDidChange
-    alert("notice", "Settings changed")
-# - (void)settingDidChange:(NSNotification*)notification {
-# if ([notification.object isEqual:@"AutoConnect"]) {
-# IASKAppSettingsViewController *activeController = self.tabBarController.selectedIndex ? self.tabAppSettingsViewController : self.appSettingsViewController;
-# BOOL enabled = (BOOL)[[notification.userInfo objectForKey:@"AutoConnect"] intValue];
-# [activeController setHiddenKeys:enabled ? nil : [NSSet setWithObjects:@"AutoConnectLogin", @"AutoConnectPassword", nil] animated:YES];
-# }
-# }
-  end
+  # def settingDidChange
+  #   alert("notice", "Settings changed")
+  # end
 
   def userDefaultsDidChange
-    App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
-  end
-
-  def alert(title, message)
-    UIAlertView.alloc.initWithTitle(title, 
-                                    message: message,
-                                    delegate: nil,
-                                    cancelButtonTitle: "OK",
-                                    otherButtonTitles: nil).show
+    # App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
+    defaults = NSUserDefaults.standardUserDefaults
+    @bc_controller.tone_volume = defaults.floatForKey('toneVolume') * (1.0 / 100.0)
+    puts "tone_volume = #{@bc_controller.tone_volume}"
+    @bc_controller.binaural_volume = defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
+    puts "binaural_volume = #{@bc_controller.binaural_volume}"
+    @bc_controller.ambient_volume = defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
+    puts "ambient_volume = #{@bc_controller.ambient_volume}"
   end
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)
-    NSNotificationCenter.defaultCenter.addObserver(self, 
-                                                   selector: "settingDidChange", 
-                                                   name: "kAppSettingChanged",
-                                                   object: nil)
+    # NSNotificationCenter.defaultCenter.addObserver(self, 
+    #                                                selector: "settingDidChange", 
+    #                                                name: "kAppSettingChanged",
+    #                                                object: nil)
     App.notification_center.addObserver(self,
                                         selector: "userDefaultsDidChange",
                                         name: NSUserDefaultsDidChangeNotification,
@@ -89,5 +82,6 @@ class AppDelegate
     cell = @settings.tableView.cellForRowAtIndexPath(indexPath)
     textfield = cell.contentView.subviews[1]  # .viewWithTag(@ambient)
     textfield.inputView = get_ambient_picker
+    userDefaultsDidChange
   end
 end

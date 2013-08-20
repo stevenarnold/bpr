@@ -274,10 +274,12 @@
     if true # if settings have positive boolean value for symbol, then play
       case sound_name
       when :rain
-        puts "3rain_sound = #{@rain_sound}"
+        puts "3rain_sound = #{@rain_sound}, volume = #{@rain_sound.volume}"
+        @rain_sound.volume = @delegate.bc_controller.ambient_volume
         @rain_sound.play
       when :binaural
         puts "3binaural_sound = #{@binaural_sound}"
+        @binaural_sound.volume = @delegate.bc_controller.binaural_volume
         @binaural_sound.play
       when :in
         puts "3in_sound = #{@in_sound}"
