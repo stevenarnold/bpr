@@ -221,10 +221,28 @@ class BeatCounterViewController < UIViewController
 
   # Picker delegate methods
   AMBIENT_SOUNDS = %w[Rain Ocean Forest]
+  RAIN = 0
+  OCEAN = 1
+  FOREST = 2
 
   def pickerView(pickerView, didSelectRow:row, inComponent:component)
     # Handle the selection
     puts "Selected row #{row}"
+    selection = AMBIENT_SOUNDS[row]
+    case row
+    when RAIN
+      puts "rain selected"
+      @ambient_sound = reset_sound(@ambient_sound, 'rain.mp3')
+    when FOREST
+      puts "forest selected"
+      @ambient_sound = reset_sound(@ambient_sound, 'forest.m4a')
+    when OCEAN
+      puts "ocean selected"
+      @ambient_sound = reset_sound(@ambient_sound, 'ocean.m4a')
+    else
+      puts "rain selected by default"
+      @ambient_sound = reset_sound(@ambient_sound, 'rain.mp3')
+    end
   end
  
   # tell the picker how many rows are available for a given component

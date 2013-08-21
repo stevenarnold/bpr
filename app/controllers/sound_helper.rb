@@ -53,6 +53,10 @@ module SoundHelper
     sound
   end
 
+  def reset_sound(sound, filename, repeat=:forever)
+    get_sound(sound, name: filename, repeat: repeat, delegate: self)
+  end
+
   def initialize_sounds
     @ambient_sound = get_sound(@ambient_sound, name: "rain.mp3", repeat: :forever, delegate: self)
     @binaural_sound = get_sound(@binaural_sound, name: "gnaural.m4a", repeat: :once, delegate: self)

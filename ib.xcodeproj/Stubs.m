@@ -3,6 +3,66 @@
 
 #import "Stubs.h"
 
+@implementation ParserError
+
+@end
+
+
+@implementation NSNotificationCenter
+
+@end
+
+
+@implementation NSURLRequest
+
+@end
+
+
+@implementation Camera
+
+@end
+
+
+@implementation UIView
+
+@end
+
+
+@implementation UIAlertView
+
+@end
+
+
+@implementation ClickedButton
+
+@end
+
+
+@implementation UIViewController
+
+@end
+
+
+@implementation InvalidURLError
+
+@end
+
+
+@implementation InvalidFileError
+
+@end
+
+
+@implementation BubbleWrap
+
+@end
+
+
+@implementation BubbleWrap
+
+@end
+
+
 @implementation AppDelegate
 
 @end

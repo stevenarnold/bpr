@@ -8,6 +8,10 @@
   outlet :time_to_run, UITextView
   outlet :target_bpm_disp, UILabel
   outlet :actual_bpm_disp, UILabel
+  outlet :ambient_sound, AVAudioPlayer
+  outlet :binaural_sound, AVAudioPlayer
+  outlet :in_sound, AVAudioPlayer
+  outlet :out_sound, AVAudioPlayer
 
   ib_action :tap_in_out_button
   ib_action :tap_reset
@@ -145,7 +149,7 @@
     @timer_thread.invalidate if @timer_thread
     @next_breathing_change.invalidate if @next_breathing_change
     @interval_timer.invalidate if @interval_timer
-    initialize_sounds
+    # initialize_sounds
     puts "2ambient_sound = #{@ambient_sound}"
     puts "2binaural_sound = #{@binaural_sound}"
     puts "2in_sound = #{@in_sound}"
