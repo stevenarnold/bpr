@@ -54,7 +54,7 @@ module SoundHelper
   end
 
   def initialize_sounds
-    @rain_sound = get_sound(@rain_sound, name: "rain.mp3", repeat: :forever, delegate: self)
+    @ambient_sound = get_sound(@ambient_sound, name: "rain.mp3", repeat: :forever, delegate: self)
     @binaural_sound = get_sound(@binaural_sound, name: "gnaural.m4a", repeat: :once, delegate: self)
     @in_sound = get_sound(@in_sound, name: "breathe_in_long.m4a", repeat: :once, delegate: self)
     @out_sound = get_sound(@out_sound, name: "breathe_out_long.m4a", repeat: :once, delegate: self)

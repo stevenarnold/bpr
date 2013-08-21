@@ -13,12 +13,12 @@
   ib_action :tap_reset
 
   attr_accessor :target_bpm, :settings, :in_sound, :out_sound,
-                :rain_sound, :binaural_sound, :time_to_run,
+                :ambient_sound, :binaural_sound, :time_to_run,
                 :act_in_avg, :act_out_avg
 
   def viewDidLoad
     super
-    puts "rain_sound = #{@rain_sound}"
+    puts "ambient_sound = #{@ambient_sound}"
     puts "binaural_sound = #{@binaural_sound}"
     puts "in_sound = #{@in_sound}"
     puts "out_sound = #{@out_sound}"
@@ -70,7 +70,7 @@
     end
     @decay_algorithm = @golden_ratio_algorithm
 
-    start_sound_if_selected(:rain)
+    start_sound_if_selected(:ambient)
     start_sound_if_selected(:binaural)
     start_timer
   end
@@ -128,7 +128,7 @@
     @beat_vc ||= @sb.instantiateViewControllerWithIdentifier("beat_counter")
     @beat_vc.in_sound = @in_sound
     @beat_vc.out_sound = @out_sound
-    @beat_vc.rain_sound = @rain_sound
+    @beat_vc.ambient_sound = @ambient_sound
     @beat_vc.binaural_sound = @binaural_sound
     puts "about to switch back to beat controller"
     # FIXME We should also halt all our sounds here
@@ -146,7 +146,7 @@
     @next_breathing_change.invalidate if @next_breathing_change
     @interval_timer.invalidate if @interval_timer
     initialize_sounds
-    puts "2rain_sound = #{@rain_sound}"
+    puts "2ambient_sound = #{@ambient_sound}"
     puts "2binaural_sound = #{@binaural_sound}"
     puts "2in_sound = #{@in_sound}"
     puts "2out_sound = #{@out_sound}"
@@ -273,19 +273,21 @@
   def start_sound_if_selected(sound_name)
     if true # if settings have positive boolean value for symbol, then play
       case sound_name
-      when :rain
-        puts "3rain_sound = #{@rain_sound}, volume = #{@rain_sound.volume}"
-        @rain_sound.volume = @delegate.bc_controller.ambient_volume
-        @rain_sound.play
+      when :ambient
+        puts "3ambient_sound = #{@ambient_sound}, volume = #{@ambient_sound.volume}"
+        @ambient_sound.volume = @delegate.bc_controller.ambient_volume
+        @ambient_sound.play
       when :binaural
         puts "3binaural_sound = #{@binaural_sound}"
         @binaural_sound.volume = @delegate.bc_controller.binaural_volume
         @binaural_sound.play
       when :in
         puts "3in_sound = #{@in_sound}"
+        @in_sound.volume = @delegate.bc_controller.tone_volume
         @in_sound.play
       when :out
         puts "3out_sound = #{@out_sound}"
+        @out_sound.volume = @delegate.bc_controller.tone_volume
         @out_sound.play
       end
     end

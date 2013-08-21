@@ -13,7 +13,7 @@ class BeatCounterViewController < UIViewController
   ib_action :tap_reset
   ib_action :tap_settings
 
-  attr_accessor :in_sound, :out_sound, :rain_sound, :binaural_sound, :timer,
+  attr_accessor :in_sound, :out_sound, :ambient_sound, :binaural_sound, :timer,
                 :tone_volume, :ambient_volume, :binaural_volume
 
   def load_settings
@@ -157,12 +157,12 @@ class BeatCounterViewController < UIViewController
     @timer_vc.act_out_avg = @act_out_avg
     @in_sound.volume = @tone_volume
     @out_sound.volume = @tone_volume
-    @rain_sound.volume = @ambient_volume
+    @ambient_sound.volume = @ambient_volume
     puts "*** When setting, @ambient_volume = #{@ambient_volume}"
     @binaural_sound.volume = @binaural_volume
     @timer_vc.in_sound = @in_sound
     @timer_vc.out_sound = @out_sound
-    @timer_vc.rain_sound = @rain_sound
+    @timer_vc.ambient_sound = @ambient_sound
     @timer_vc.binaural_sound = @binaural_sound
     # FIXME We should also halt all our sounds here
     UIView.beginAnimations(nil, context:nil)
