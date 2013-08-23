@@ -53,6 +53,18 @@ module SoundHelper
     sound
   end
 
+  def initialize_defaults(controller=self, defaults=nil)
+    defaults = @delegate.defaults if !defaults
+    controller.tone_volume = defaults.floatForKey('toneVolume') * (1.0 / 100.0)
+    puts "tone_volume = #{controller.tone_volume}"
+    controller.binaural_volume = defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
+    puts "binaural_volume = #{controller.binaural_volume}"
+    controller.ambient_volume = defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
+    puts "ambient_volume = #{controller.ambient_volume}"
+    controller.ambient_program = defaults.objectForKey('ambientProgram')
+    puts "ambient_program = #{controller.ambient_program}"
+  end
+
   def reset_sound(sound, filename, repeat=:forever)
     get_sound(sound, name: filename, repeat: repeat, delegate: self)
   end

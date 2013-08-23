@@ -18,7 +18,7 @@
 
   attr_accessor :target_bpm, :settings, :in_sound, :out_sound,
                 :ambient_sound, :binaural_sound, :time_to_run,
-                :act_in_avg, :act_out_avg
+                :act_in_avg, :act_out_avg, :ambient_program, :delegate
 
   def viewDidLoad
     super
@@ -130,11 +130,9 @@
     reset
     # Now send the user back to the beat controller
     @beat_vc ||= @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    @beat_vc.in_sound = @in_sound
-    @beat_vc.out_sound = @out_sound
-    @beat_vc.ambient_sound = @ambient_sound
-    @beat_vc.binaural_sound = @binaural_sound
+    initialize_defaults(@beat_vc)
     puts "about to switch back to beat controller"
+    initialize_sounds
     # FIXME We should also halt all our sounds here
     UIView.beginAnimations(nil, context:nil)
     UIView.setAnimationDuration(0.0)

@@ -1,9 +1,10 @@
 class AppDelegate
   extend IB
+  include SoundHelper
 
   outlet :window, UIWindow
   attr_accessor :sb, :settings, :ambient, :binaural, :navigationController,
-                :bc_controller
+                :bc_controller, :defaults
 
   def initialize_sound
     # sessionCategory = kAudioSessionCategory_MediaPlayback;
@@ -14,28 +15,28 @@ class AppDelegate
     # );
   end
 
+  def row_for_sound(sound)
+    case sound
+    when 'rain'
+      0
+    when 'ocean'
+      1
+    when 'forest'
+      2
+    else
+      0
+    end
+  end
+
   def get_ambient_picker
     myPickerView = UIPickerView.alloc.initWithFrame(CGRectMake(0, 200, 320, 200))
     myPickerView.delegate = @bc_controller
     myPickerView.showsSelectionIndicator = true
     myPickerView.tag = @ambient
+    myPickerView.selectRow(row_for_sound(@defaults.objectForKey('ambientProgram')), inComponent: 0, animated: true)
     myPickerView
   end
 
-  def change_to_picker(key, value)
-    # Load the default values for the user defaults
-    pathToUserDefaultsValues = NSBundle.mainBundle.
-                                        pathForResource("userDefaults", ofType:"plist")
-    userDefaultsValues = NSDictionary.dictionaryWithContentsOfFile(pathToUserDefaultsValues) || 
-                         NSDictionary.dictionaryWithObject(value, forKey:key)
-
-    # Set them in the standard user defaults
-    puts "as01"
-    # NSUserDefaults.standardUserDefaults.registerDefaults(userDefaultsValues)
-    puts "as02"
-  end
-
-  # Might need to implement 'dismiss' to capture the actual settings in our app
   def settingsViewControllerDidEnd(sender)
     @bc_controller.show_view(@navigationController.view, @bc_controller)
   end
@@ -46,13 +47,10 @@ class AppDelegate
 
   def userDefaultsDidChange
     # App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
-    defaults = NSUserDefaults.standardUserDefaults
-    @bc_controller.tone_volume = defaults.floatForKey('toneVolume') * (1.0 / 100.0)
-    puts "tone_volume = #{@bc_controller.tone_volume}"
-    @bc_controller.binaural_volume = defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
-    puts "binaural_volume = #{@bc_controller.binaural_volume}"
-    @bc_controller.ambient_volume = defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
-    puts "ambient_volume = #{@bc_controller.ambient_volume}"
+    @bc_controller.initialize_defaults(@bc_controller, @defaults)
+  end
+
+  def prepare_picker
   end
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)
@@ -79,9 +77,12 @@ class AppDelegate
     puts "indexPath = #{indexPath}"
     puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(0)}"
     puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(1)}"
+    @defaults = NSUserDefaults.standardUserDefaults
+    userDefaultsDidChange
     cell = @settings.tableView.cellForRowAtIndexPath(indexPath)
+    puts "cell = #{cell}"
+    puts "label = #{cell.contentView.subviews[0]}"
     textfield = cell.contentView.subviews[1]  # .viewWithTag(@ambient)
     textfield.inputView = get_ambient_picker
-    userDefaultsDidChange
   end
 end

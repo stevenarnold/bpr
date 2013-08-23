@@ -14,9 +14,12 @@ class BeatCounterViewController < UIViewController
   ib_action :tap_settings
 
   attr_accessor :in_sound, :out_sound, :ambient_sound, :binaural_sound, :timer,
-                :tone_volume, :ambient_volume, :binaural_volume
+                :tone_volume, :ambient_volume, :binaural_volume, :ambient_program,
+                :delegate
 
   def load_settings
+    defaults = @delegate.defaults
+    # @tone_volume = defaults.objectForKey('tone')
     # NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     # NSString *documentsDirectory = [paths objectAtIndex:0];
     # settingsFilename = [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
@@ -193,10 +196,12 @@ class BeatCounterViewController < UIViewController
       if was_breathing_in
         @out_count += 1
         @act_out_avg = ((@act_out_avg * (@out_count - 1)) + interval) / @out_count
+        @out_sound.volume = @tone_volume
         @out_sound.play
       else
         @in_count += 1
         @act_in_avg = ((@act_in_avg * (@in_count - 1)) + interval) / @in_count
+        @in_sound.volume = @tone_volume
         @in_sound.play
       end
       toggle_breathing_state
@@ -228,20 +233,25 @@ class BeatCounterViewController < UIViewController
   def pickerView(pickerView, didSelectRow:row, inComponent:component)
     # Handle the selection
     puts "Selected row #{row}"
+    defaults = @delegate.defaults
     selection = AMBIENT_SOUNDS[row]
     case row
     when RAIN
       puts "rain selected"
       @ambient_sound = reset_sound(@ambient_sound, 'rain.mp3')
+      defaults.setObject("rain", forKey:"ambientProgram")
     when FOREST
       puts "forest selected"
       @ambient_sound = reset_sound(@ambient_sound, 'forest.m4a')
+      defaults.setObject("forest", forKey:"ambientProgram")
     when OCEAN
       puts "ocean selected"
       @ambient_sound = reset_sound(@ambient_sound, 'ocean.m4a')
+      defaults.setObject("ocean", forKey:"ambientProgram")
     else
       puts "rain selected by default"
       @ambient_sound = reset_sound(@ambient_sound, 'rain.mp3')
+      defaults.setObject("rain", forKey:"ambientProgram")
     end
   end
  
