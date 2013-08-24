@@ -28,15 +28,6 @@ class AppDelegate
     end
   end
 
-  def get_ambient_picker
-    myPickerView = UIPickerView.alloc.initWithFrame(CGRectMake(0, 200, 320, 200))
-    myPickerView.delegate = @bc_controller
-    myPickerView.showsSelectionIndicator = true
-    myPickerView.tag = @ambient
-    myPickerView.selectRow(row_for_sound(@defaults.objectForKey('ambientProgram')), inComponent: 0, animated: true)
-    myPickerView
-  end
-
   def settingsViewControllerDidEnd(sender)
     @bc_controller.show_view(@navigationController.view, @bc_controller)
   end
@@ -73,16 +64,7 @@ class AppDelegate
     initialize_sound
     @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
     @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    indexPath = NSIndexPath.indexPathForRow(2, inSection:0)
-    puts "indexPath = #{indexPath}"
-    puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(0)}"
-    puts "numberOfRowsInSection:0 = #{@settings.tableView.numberOfRowsInSection(1)}"
     @defaults = NSUserDefaults.standardUserDefaults
     userDefaultsDidChange
-    cell = @settings.tableView.cellForRowAtIndexPath(indexPath)
-    puts "cell = #{cell}"
-    puts "label = #{cell.contentView.subviews[0]}"
-    textfield = cell.contentView.subviews[1]  # .viewWithTag(@ambient)
-    textfield.inputView = get_ambient_picker
   end
 end

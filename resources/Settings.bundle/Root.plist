@@ -29,22 +29,26 @@
 			<string>PSSliderSpecifier</string>
 		</dict>
 		<dict>
-			<key>AutocapitalizationType</key>
-			<string>Sentences</string>
-			<key>AutocorrectionType</key>
-			<string>Default</string>
 			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<false/>
+			<string>rain</string>
 			<key>Key</key>
 			<string>ambientProgram</string>
-			<key>KeyboardType</key>
-			<string>Alphabet</string>
 			<key>Title</key>
 			<string>Ambient Program</string>
+			<key>Titles</key>
+			<array>
+				<string>Rain</string>
+				<string>Ocean</string>
+				<string>Forest</string>
+			</array>
 			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
+			<string>PSMultiValueSpecifier</string>
+			<key>Values</key>
+			<array>
+				<string>rain</string>
+				<string>ocean</string>
+				<string>forest</string>
+			</array>
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
