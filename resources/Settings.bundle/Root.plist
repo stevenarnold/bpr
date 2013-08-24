@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>rain</string>
+			<string>rain.mp3</string>
 			<key>Key</key>
 			<string>ambientProgram</string>
 			<key>Title</key>
@@ -45,9 +45,9 @@
 			<string>PSMultiValueSpecifier</string>
 			<key>Values</key>
 			<array>
-				<string>rain</string>
-				<string>ocean</string>
-				<string>forest</string>
+				<string>rain.mp3</string>
+				<string>ocean.m4a</string>
+				<string>forest.m4a</string>
 			</array>
 		</dict>
 		<dict>

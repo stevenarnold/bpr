@@ -22,8 +22,8 @@ Motion::SettingsBundle.setup do |app|
   app.title "Binaural Volume", key: "binauralVolumeTitle", default: ""
   app.slider "Binaural Volume", key: "binauralVolume", default: 50, min: 1, max: 100
   # app.multivalue "Picture Resolution 1", key: "pictureResolution1", default: "1500", values: ["1500", "1200", "1000"]
-  app.multivalue "Ambient Program", key: "ambientProgram", default: "rain",
-    values: ["rain", "ocean", "forest"], titles: ["Rain", "Ocean", "Forest"]
+  app.multivalue "Ambient Program", key: "ambientProgram", default: "rain.mp3",
+    values: ["rain.mp3", "ocean.m4a", "forest.m4a"], titles: ["Rain", "Ocean", "Forest"]
   app.title "Ambient Volume", key: "ambientVolumeTitle", default: ""
   app.slider "Ambient Volume", key: "ambientVolume", default: 50, min: 1, max: 100
   app.title "Tone Volume", key: "toneVolumeTitle", default: ""

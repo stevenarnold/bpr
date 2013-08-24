@@ -38,7 +38,7 @@ class AppDelegate
 
   def userDefaultsDidChange
     # App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
-    @bc_controller.initialize_defaults(@bc_controller, @defaults)
+    @bc_controller.initialize_defaults
   end
 
   def prepare_picker
@@ -59,12 +59,12 @@ class AppDelegate
     @window.makeKeyAndVisible
     @sb = UIStoryboard.storyboardWithName("Storyboard", bundle: nil)
     @settings = IASKAppSettingsViewController.alloc.initWithNibName("IASKAppSettingsView", bundle: nil)
+    @defaults = NSUserDefaults.standardUserDefaults
     puts "@settings = #{@settings}"
     puts "@settings.view = #{@settings.view}"
     initialize_sound
     @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
     @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    @defaults = NSUserDefaults.standardUserDefaults
     userDefaultsDidChange
   end
 end

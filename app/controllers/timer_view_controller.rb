@@ -130,10 +130,9 @@
     reset
     # Now send the user back to the beat controller
     @beat_vc ||= @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    initialize_defaults(@beat_vc)
+    @beat_vc.initialize_defaults(@delegate)
     puts "about to switch back to beat controller"
     initialize_sounds
-    # FIXME We should also halt all our sounds here
     UIView.beginAnimations(nil, context:nil)
     UIView.setAnimationDuration(0.0)
     UIView.setAnimationTransition(UIViewAnimationTransitionFlipFromRight,

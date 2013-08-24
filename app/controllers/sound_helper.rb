@@ -1,7 +1,8 @@
 module SoundHelper
   # Sound management
 
-  attr_accessor :tone_volume, :binaural_volume, :ambient_volume
+  attr_accessor :tone_volume, :binaural_volume, :ambient_volume, :ambient_program,
+                :defaults
 
   def play(sound)
     puts "sound = #{sound}"
@@ -53,16 +54,25 @@ module SoundHelper
     sound
   end
 
-  def initialize_defaults(controller=self, defaults=nil)
-    defaults = @delegate.defaults if !defaults
-    controller.tone_volume = defaults.floatForKey('toneVolume') * (1.0 / 100.0)
-    puts "tone_volume = #{controller.tone_volume}"
-    controller.binaural_volume = defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
-    puts "binaural_volume = #{controller.binaural_volume}"
-    controller.ambient_volume = defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
-    puts "ambient_volume = #{controller.ambient_volume}"
-    controller.ambient_program = defaults.objectForKey('ambientProgram')
-    puts "ambient_program = #{controller.ambient_program}"
+  def valid_program?(program)
+    %w[rain.mp3 ocean.m4a forest.m4a].include?(program)
+  end
+
+  def initialize_defaults(delegate=nil)
+    @delegate = delegate if delegate
+    puts "id 01"
+    @defaults = @delegate.defaults if !@defaults
+    puts "id 02: @defaults = #{@defaults}"
+    @tone_volume = @defaults.floatForKey('toneVolume') * (1.0 / 100.0)
+    puts "tone_volume = #{@tone_volume}"
+    @binaural_volume = @defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
+    puts "binaural_volume = #{@binaural_volume}"
+    @ambient_volume = @defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
+    puts "ambient_volume = #{@ambient_volume}"
+    @ambient_program = @defaults.objectForKey('ambientProgram')
+    puts "ambient_program = #{@ambient_program}"
+    @ambient_program = "rain.mp3" unless valid_program?(@ambient_program)
+    puts "ambient_program = #{@ambient_program}"
   end
 
   def reset_sound(sound, filename, repeat=:forever)
@@ -70,9 +80,16 @@ module SoundHelper
   end
 
   def initialize_sounds
-    @ambient_sound = get_sound(@ambient_sound, name: "rain.mp3", repeat: :forever, delegate: self)
+    puts "is 01"
+    initialize_defaults if !@defaults
+    puts "is 02"
+    @ambient_sound = get_sound(@ambient_sound, name: @ambient_program, repeat: :forever, delegate: self)
+    puts "is 03"
     @binaural_sound = get_sound(@binaural_sound, name: "gnaural.m4a", repeat: :once, delegate: self)
+    puts "is 04"
     @in_sound = get_sound(@in_sound, name: "breathe_in_long.m4a", repeat: :once, delegate: self)
+    puts "is 05"
     @out_sound = get_sound(@out_sound, name: "breathe_out_long.m4a", repeat: :once, delegate: self)
+    puts "is 06"
   end
 end

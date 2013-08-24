@@ -18,36 +18,7 @@ class BeatCounterViewController < UIViewController
                 :delegate
 
   def load_settings
-    defaults = @delegate.defaults
-    # @tone_volume = defaults.objectForKey('tone')
-    # NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    # NSString *documentsDirectory = [paths objectAtIndex:0];
-    # settingsFilename = [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
-    # if (![[NSFileManager defaultManager] fileExistsAtPath:settingsFilename]) {
-    #     NSLog(@"No settings file name found, using default");
-    #     settingsFilename = SETTINGS;
-    # }
-    # NSLog(@"settings file is supposed to be at path = %@", settingsFilename);
-    # if ([[NSFileManager defaultManager] fileExistsAtPath:settingsFilename]) {
-    #     NSLog(@"Settings file '%@' exists, loading it", settingsFilename);
-    #     settings = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsFilename];
-    #     target.value = [[settings valueForKey:@"bpm"] floatValue];
-    #     NSLog(@"[settings valueForKey:@bpm] = %@", [settings valueForKey:@"bpm"]);
-    #     targetValue.text = [[settings valueForKey:@"bpm"] stringValue];
-    #     NSLog(@"1");
-    #     timeToRun.value = [[settings valueForKey:@"time"] floatValue];
-    #     NSLog(@"2");
-    #     NSLog(@"timeToRun.value = %2.2f", timeToRun.value);
-    #     timeToRunValue.text = [NSString stringWithFormat:@"%2.2f", timeToRun.value];
-    #     NSLog(@"3");
-    # } else {
-    #     NSLog(@"Settings file does NOT exist, initializing");
-    #     settings = [[NSMutableDictionary alloc] init];
-    #     target.value = kDefaultTarget;
-    #     targetValue.text = kDefaultTargetBPM;
-    #     timeToRun.value = kDefaultTime;
-    #     timeToRunValue.text = kDefaultTimeStr;
-    # }
+    initialize_defaults
   end
 
   def save_settings
@@ -80,16 +51,16 @@ class BeatCounterViewController < UIViewController
     @progress_display.text = "Press 'In' Button When Breathing In"
     @in_out_button.setTitle("Breathe In", forState:UIControlStateNormal)
     @in_out_button.setTitle("Breathe In", forState:UIControlStateHighlighted)
+    load_settings
     puts "state initialized"
   end
 
   def viewDidLoad
     super
-    puts "loading beat view"
-    initialize_state
-    puts "state initialized"
     @delegate = UIApplication.sharedApplication.delegate
     puts "delegate = #{@delegate}"
+    initialize_state
+    puts "state initialized"
     @sb = @delegate.sb
     puts "@delegate.sb = #{@delegate.sb}"
     @settings = @delegate.settings
@@ -97,9 +68,8 @@ class BeatCounterViewController < UIViewController
     @settings.showDoneButton = true
     @navigationController = @delegate.navigationController
     @window = UIApplication.sharedApplication.keyWindow
+    puts "vdl 05"
     
-    # prefsVC = mainDelegate.prefsVC;
-    load_settings
     initialize_sounds
     puts "beat viewDidLoad done"
   end
@@ -222,61 +192,6 @@ class BeatCounterViewController < UIViewController
     show_view(view, @navigationController)
     # @navigationController.pushViewController(@settings, animated:true)
     puts "settings 05"
-  end
-
-  # Picker delegate methods
-  AMBIENT_SOUNDS = %w[Rain Ocean Forest]
-  RAIN = 0
-  OCEAN = 1
-  FOREST = 2
-
-  def pickerView(pickerView, didSelectRow:row, inComponent:component)
-    # Handle the selection
-    puts "Selected row #{row}"
-    defaults = @delegate.defaults
-    selection = AMBIENT_SOUNDS[row]
-    case row
-    when RAIN
-      puts "rain selected"
-      @ambient_sound = reset_sound(@ambient_sound, 'rain.mp3')
-      defaults.setObject("rain", forKey:"ambientProgram")
-    when FOREST
-      puts "forest selected"
-      @ambient_sound = reset_sound(@ambient_sound, 'forest.m4a')
-      defaults.setObject("forest", forKey:"ambientProgram")
-    when OCEAN
-      puts "ocean selected"
-      @ambient_sound = reset_sound(@ambient_sound, 'ocean.m4a')
-      defaults.setObject("ocean", forKey:"ambientProgram")
-    else
-      puts "rain selected by default"
-      @ambient_sound = reset_sound(@ambient_sound, 'rain.mp3')
-      defaults.setObject("rain", forKey:"ambientProgram")
-    end
-  end
- 
-  # tell the picker how many rows are available for a given component
-  def pickerView(pickerView, numberOfRowsInComponent:component)
-    AMBIENT_SOUNDS.length
-  end
-   
-  # tell the picker how many components it will have
-  def numberOfComponentsInPickerView(pickerView)
-    1
-  end
-   
-  # tell the picker the title for a given component
-  def pickerView(pickerView, titleForRow:row, forComponent:component)
-    if pickerView.tag == @delegate.ambient
-      AMBIENT_SOUNDS[row]
-    elsif pickerView.tag = @delegate.binaural
-      BINAURAL_SOUNDS[row]
-    end
-  end
-   
-  # tell the picker the width of each row for a given component
-  def pickerView(pickerView, widthForComponent:component)
-   sectionWidth = 300
   end
 end
 
