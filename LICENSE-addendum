@@ -1,0 +1,57 @@
+LICENSING
+=========
+
+This app is licensed under the GPL v3.  Certain additional restrictions given
+below also apply, and supercede the GPL v3.  You may contact the original
+author, Steven D. Arnold, at stevena+licenses@arnold-software.com, if you wish
+to receive a license that differs from this.
+
+"You" are considered to be the person, corporation or other entity, such as
+government agency, that is in any way using, copying, modifying, or
+distributing this product or any derivative work for any reason whatsoever.
+
+In addition to the restrictions of the GPL v3, if you distribute your
+own work based in whole or in part on this code, you may not name your 
+product "Blood Pressure Reducer", "BPR", or any derivatives of these 
+names such as (for example purposes only) "BPR 2", 
+"Better Blood Pressure Reducer", "Blood Pressure Calmer" and the like;
+nor may you use these names or derivatives when advertising, promoting, or
+otherwise marketing your derivative work.
+
+Having said this, when distributing your code, in a README at the root-level
+directory of your project, you must state:
+
+"Parts of this project were contributed by the BPR project at
+https://github.com/stevenarnold/bpr, (c) 2013 by Steven Arnold and
+Arnold Software Associates." 
+
+We request, but do not require, that you attribute Arnold Software Associates
+visibly in your product somewhere in the user interface if your product uses
+code or artifacts, such as sounds, from BPR.  The example attribution above
+would be ideal, but a shorter attribution is also fine.  A good example
+location is an initial splash screen or an "about" section.
+
+You agree that the product comes with no warranty whatsoever, and that you
+alone are responsible for all consequences of any use of the product.  You
+agree to indemnify and hold harmless Steven D. Arnold and Arnold Software
+Associates from the results of any usage of the product or any derivative
+created by you.  This is true even if Steven D. Arnold or Arnold Software
+Associates knew or should have known about a flaw in the program.  To put it
+simply, if you download or use this product in any way, for any reason, the
+legal consequences of what happened are entirely yours.
+
+You may only sublicense this software or any derivative work provided you pass
+along these obligations to the assignee verbatim in writing as part of the
+source code distribution.  If these additional conditions  contradict any
+terms of the GPL v3, the terms and conditions defined here shall be
+considered definitive, and the terms of the GPL v3 shall be modified in the
+smallest possible way to allow for this, with the  remainder of the GPL v3
+provisions continuing in full force.  Any  violation of the terms of this
+license, either the GPL v3 or these additional restrictions, immediately
+terminates your license and rights to use, copy or market this product or any
+derivative work created with it; however the suspension of your rights does
+not invalidate the rights of subassignees, provided they are honoring the
+terms of the license.  If your rights are suspended, you must immediately
+destroy all copies of the software in your possession, including backup copies
+or repository copies.
+
