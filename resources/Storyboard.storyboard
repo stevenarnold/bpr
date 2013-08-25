@@ -46,7 +46,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tap_reset:" destination="IAD-Ww-qbJ" eventType="touchUpInside" id="zkL-fm-QfE"/>
+                                    <action selector="tap_reset:" destination="IAD-Ww-qbJ" eventType="touchUpInside" id="GJS-Tr-kiW"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-lr-XkW">
@@ -108,7 +108,6 @@
                     <connections>
                         <outlet property="in_out_button" destination="wko-q2-nnd" id="owp-dA-9YG"/>
                         <outlet property="progress_display" destination="Z0a-T6-d4W" id="q9d-FJ-pe0"/>
-                        <outlet property="reset" destination="PfX-7x-HNs" id="TSF-JC-RmE"/>
                         <outlet property="target" destination="1pu-lr-XkW" id="N9Y-IX-2hU"/>
                         <outlet property="time_to_run" destination="CIk-js-Y0s" id="Mzn-6M-5lF"/>
                         <outlet property="timer" destination="AN4-MK-vb7" id="NEG-wm-IfZ"/>
@@ -391,6 +390,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tap_reset:" destination="VIz-mu-Yhb" eventType="touchUpInside" id="tm3-dW-yrz"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ube-WM-lMB">
                                 <constraints>
@@ -461,7 +463,6 @@
                     <connections>
                         <outlet property="in_out_button" destination="EFw-uo-FBl" id="ZBs-Iw-5Ze"/>
                         <outlet property="progress_display" destination="eXH-YC-VvS" id="QsT-c3-S3Z"/>
-                        <outlet property="reset" destination="DkI-a2-Nrx" id="FuT-Ot-mbR"/>
                         <outlet property="target" destination="ube-WM-lMB" id="qgI-sZ-wn7"/>
                         <outlet property="time_to_run" destination="cIM-7r-0Gg" id="2Z8-Ah-tYX"/>
                         <outlet property="timer" destination="cjI-2k-a5F" id="8kT-Ed-BaJ"/>
@@ -480,9 +481,6 @@
                 <relationship kind="action" name="bpm"/>
                 <relationship kind="action" name="initialize_state"/>
                 <relationship kind="action" name="load_settings"/>
-                <relationship kind="action" name="numberOfComponentsInPickerView:"/>
-                <relationship kind="action" name="save_settings"/>
-                <relationship kind="action" name="settingsViewControllerDidEnd:"/>
                 <relationship kind="action" name="start_timer"/>
                 <relationship kind="action" name="still_collecting_initial_data"/>
                 <relationship kind="action" name="tap_in_out_button:"/>
@@ -526,11 +524,27 @@
                 <relationship kind="action" name="update_timer"/>
                 <relationship kind="action" name="viewDidLoad"/>
                 <relationship kind="outlet" name="actual_bpm_disp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ambient_sound" candidateClass="AVAudioPlayer"/>
+                <relationship kind="outlet" name="binaural_sound" candidateClass="AVAudioPlayer"/>
                 <relationship kind="outlet" name="in_out_button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="in_sound" candidateClass="AVAudioPlayer"/>
+                <relationship kind="outlet" name="out_sound" candidateClass="AVAudioPlayer"/>
                 <relationship kind="outlet" name="reset" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="target_bpm_disp" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="time_to_run" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="timer" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIView.h"/>
+            <relationships>
+                <relationship kind="action" name="handle_gesture:"/>
+            </relationships>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="content_frame"/>
             </relationships>
         </class>
     </classes>

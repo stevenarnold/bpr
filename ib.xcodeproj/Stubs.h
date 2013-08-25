@@ -182,9 +182,9 @@
 
 
 -(IBAction) initialize_sound;
--(IBAction) get_ambient_picker;
 -(IBAction) settingsViewControllerDidEnd:(id) sender;
 -(IBAction) userDefaultsDidChange;
+-(IBAction) prepare_picker;
 
 @end
 
@@ -204,7 +204,6 @@
 -(IBAction) tap_reset:(id) sender;
 -(IBAction) tap_settings:(id) sender;
 -(IBAction) load_settings;
--(IBAction) save_settings;
 -(IBAction) initialize_state;
 -(IBAction) viewDidLoad;
 -(IBAction) applicationWillTerminate:(id) notification;
@@ -214,7 +213,6 @@
 -(IBAction) toggle_breathing_state;
 -(IBAction) update_status_text;
 -(IBAction) start_timer;
--(IBAction) numberOfComponentsInPickerView:(id) pickerView;
 
 @end
 

@@ -21,24 +21,9 @@ class BeatCounterViewController < UIViewController
     initialize_defaults
   end
 
-  def save_settings
-    # [settings setValue:[NSNumber numberWithFloat:[target value]] forKey:@"bpm"];
-    # [settings setValue:[NSNumber numberWithFloat:timeToRun.value] forKey:@"time"];
-    # NSLog(@"settings = %@", settings);
-    # NSFileManager *fileManager = [NSFileManager defaultManager];
-    # NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    # NSString *documentsDirectory = [paths objectAtIndex:0];
-    # NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
-    # if (mainDelegate.deleteSettingsFile) {
-    #     if ([fileManager fileExistsAtPath:fullPath])
-    #         [fileManager removeItemAtPath:fullPath error:nil];
-    # } else {
-    #     [settings writeToFile:fullPath atomically:YES];
-    # }
-  end
-
   def initialize_state
     puts "initializing state"
+    initialize_defaults
     @fields_are_editing = false
     @in_count = 0
     @out_count = 0
@@ -137,13 +122,13 @@ class BeatCounterViewController < UIViewController
     @timer_vc.out_sound = @out_sound
     @timer_vc.ambient_sound = @ambient_sound
     @timer_vc.binaural_sound = @binaural_sound
-    # FIXME We should also halt all our sounds here
     UIView.beginAnimations(nil, context:nil)
     UIView.setAnimationDuration(0.0)
     UIView.setAnimationTransition(UIViewAnimationTransitionFlipFromRight,
                 forView:@window, cache:true)
     show_view(view, @timer_vc)
     UIView.commitAnimations
+    @timer_vc.viewDidLoad
   end
 
   def show_view(old_view, new_vc)

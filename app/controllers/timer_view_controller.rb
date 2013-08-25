@@ -129,8 +129,9 @@
   def tap_reset sender
     reset
     # Now send the user back to the beat controller
-    @beat_vc ||= @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    @beat_vc.initialize_defaults(@delegate)
+    # @beat_vc ||= @sb.instantiateViewControllerWithIdentifier("beat_counter")
+    @beat_vc = @delegate.bc_controller
+    @beat_vc.initialize_state
     puts "about to switch back to beat controller"
     initialize_sounds
     UIView.beginAnimations(nil, context:nil)
@@ -140,6 +141,14 @@
     view.removeFromSuperview
     @window.addSubview(@beat_vc.view)
     UIView.commitAnimations
+  end
+
+  def tap_in_out_button sender
+    # In the future, this will be the user's way to tell the app when he/she 
+    # is really breathing in and out, if there's a problem keeping up with the
+    # bells.  We'll probably let the user tap in and out as much as they want,
+    # and use that to measure the revised breathing rate.  For now, the method
+    # is just here so we don't crash.
   end
 
   def reset
