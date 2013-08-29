@@ -63,6 +63,10 @@ class BeatCounterViewController < UIViewController
     save_settings
   end
 
+  def supportedInterfaceOrientations
+    UIInterfaceOrientationMaskPortrait
+  end
+
   def alert(title, message, btn_title="OK")
     @an_alert = UIAlertView.alloc.initWithTitle(title,
         message: message,

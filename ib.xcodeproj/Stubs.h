@@ -207,6 +207,7 @@
 -(IBAction) initialize_state;
 -(IBAction) viewDidLoad;
 -(IBAction) applicationWillTerminate:(id) notification;
+-(IBAction) supportedInterfaceOrientations;
 -(IBAction) still_collecting_initial_data;
 -(IBAction) was_breathing_in;
 -(IBAction) bpm;

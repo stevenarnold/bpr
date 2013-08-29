@@ -18,6 +18,16 @@ names such as (for example purposes only) "BPR 2",
 nor may you use these names or derivatives when advertising, promoting, or
 otherwise marketing your derivative work.
 
+If you distribute a derivative work of the app to others, you may use any
+media resources in the app, such as artwork, sounds, etc, but may not use the
+files Icon.png, Icon-72.png, Icon@2x.png, iTunesArtwork.png,
+iTunesArtwork@2x.png, or any derivative works, in your distributed
+application.
+
+In simple non-lawyer English, the above two paragraphs mean: do not use our
+icons or branding; make your own clearly distinctive icons and app name, and
+use those.
+
 Having said this, when distributing your code, in a README at the root-level
 directory of your project, you must state:
 
@@ -38,7 +48,7 @@ Associates from the results of any usage of the product or any derivative
 created by you.  This is true even if Steven D. Arnold or Arnold Software
 Associates knew or should have known about a flaw in the program.  To put it
 simply, if you download or use this product in any way, for any reason, the
-legal consequences of what happened are entirely yours.
+legal consequences of what happens are entirely yours.
 
 You may only distribute this software or any derivative work provided you pass
 along these obligations to the assignee verbatim in writing as part of the

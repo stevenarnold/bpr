@@ -12,6 +12,7 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'Blood Pressure Reducer'
   app.frameworks += ['AVFoundation']
+  app.icons = ["Icon.png", "Icon-72.png", "Icon@2x.png"]
   app.pods do
     pod 'InAppSettingsKit'
   end

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IAD-Ww-qbJ">
     <dependencies>
+        <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
@@ -13,6 +14,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wko-q2-nnd">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="GgJ-dy-UKg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tap When Ready to Breathe In">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,9 +38,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-7x-HNs">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="sIW-n4-Tzr"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,16 +52,12 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-lr-XkW">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="QtX-9k-3nc"/>
-                                    <constraint firstAttribute="height" constant="30" id="y8l-fz-Bvr"/>
+                                    <constraint firstAttribute="width" constant="77" id="ZDe-Vb-7D2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-js-Y0s">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OXk-SG-tma"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -83,7 +80,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1pu-lr-XkW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="46S-UD-MNt"/>
-                            <constraint firstItem="CIk-js-Y0s" firstAttribute="leading" secondItem="1pu-lr-XkW" secondAttribute="leading" type="default" id="4ZY-ba-vyS"/>
                             <constraint firstItem="Z0a-T6-d4W" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="85" id="4s8-xB-zpC"/>
                             <constraint firstItem="AN4-MK-vb7" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5DT-5f-YpT"/>
                             <constraint firstItem="CIk-js-Y0s" firstAttribute="top" secondItem="1pu-lr-XkW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6hC-Xg-3jH"/>
@@ -93,8 +89,8 @@
                             <constraint firstItem="BqL-fS-C24" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="129" id="Ldb-yR-B4h"/>
                             <constraint firstItem="wko-q2-nnd" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PIR-h0-jYc"/>
                             <constraint firstItem="Z0a-T6-d4W" firstAttribute="centerX" secondItem="AN4-MK-vb7" secondAttribute="centerX" type="default" id="Raq-Cs-Dox"/>
-                            <constraint firstItem="1pu-lr-XkW" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="125" id="RzR-BQ-AEF"/>
                             <constraint firstItem="wko-q2-nnd" firstAttribute="top" secondItem="PfX-7x-HNs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SkA-bw-ZTn"/>
+                            <constraint firstItem="1pu-lr-XkW" firstAttribute="leading" secondItem="CIk-js-Y0s" secondAttribute="leading" type="default" id="V7A-pm-4Px"/>
                             <constraint firstItem="BVm-24-Sfa" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="VsS-Bp-Gci"/>
                             <constraint firstItem="PfX-7x-HNs" firstAttribute="top" secondItem="CIk-js-Y0s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iWx-Mo-ESB"/>
                             <constraint firstAttribute="trailing" secondItem="CIk-js-Y0s" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="psg-AW-oKU"/>
@@ -105,6 +101,7 @@
                             <constraint firstItem="BqL-fS-C24" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yMe-mT-cbQ"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="in_out_button" destination="wko-q2-nnd" id="owp-dA-9YG"/>
                         <outlet property="progress_display" destination="Z0a-T6-d4W" id="q9d-FJ-pe0"/>
@@ -483,6 +480,7 @@
                 <relationship kind="action" name="load_settings"/>
                 <relationship kind="action" name="start_timer"/>
                 <relationship kind="action" name="still_collecting_initial_data"/>
+                <relationship kind="action" name="supportedInterfaceOrientations"/>
                 <relationship kind="action" name="tap_in_out_button:"/>
                 <relationship kind="action" name="tap_reset:"/>
                 <relationship kind="action" name="tap_settings:"/>
@@ -497,6 +495,9 @@
                 <relationship kind="outlet" name="time_to_run" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="timer" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="TimerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimerViewController.h"/>
