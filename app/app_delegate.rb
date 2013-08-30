@@ -4,7 +4,7 @@ class AppDelegate
 
   outlet :window, UIWindow
   attr_accessor :sb, :settings, :ambient, :binaural, :navigationController,
-                :bc_controller, :defaults
+                :bc_controller, :defaults, :first_run
 
   def initialize_sound
     # sessionCategory = kAudioSessionCategory_MediaPlayback;
@@ -21,7 +21,9 @@ class AppDelegate
 
   def userDefaultsDidChange
     # App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
-    @bc_controller.initialize_state
+    if !@first_run
+      @bc_controller.initialize_state
+    end
   end
 
   def prepare_picker

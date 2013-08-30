@@ -64,14 +64,32 @@ module SoundHelper
     @defaults = @delegate.defaults if !@defaults
     puts "id 02: @defaults = #{@defaults}"
     @tone_volume = @defaults.floatForKey('toneVolume') * (1.0 / 100.0)
-    puts "tone_volume = #{@tone_volume}"
+    puts "id 03"
     @binaural_volume = @defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
-    puts "binaural_volume = #{@binaural_volume}"
+    puts "id 04"
     @ambient_volume = @defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
-    puts "ambient_volume = #{@ambient_volume}"
+    puts "id 05"
     @ambient_program = @defaults.objectForKey('ambientProgram')
-    puts "ambient_program = #{@ambient_program}"
+    puts "id 06"
+    if @tone_volume == 0 && @binaural_volume == 0 && @ambient_volume == 0
+      puts "id 07"
+      @delegate.first_run = true
+      puts "id 08"
+      @tone_volume = @binaural_volume = @ambient_volume = 0.50
+      puts "id 09"
+      @defaults.setFloat(50.0, forKey: 'binauralVolume')
+      puts "id 10"
+      @defaults.setFloat(50.0, forKey: 'ambientVolume')
+      puts "id 11"
+      @defaults.setFloat(50.0, forKey: 'toneVolume')
+    end
+    @delegate.first_run = false
+    puts "id 13"
     @ambient_program = "rain.mp3" unless valid_program?(@ambient_program)
+    puts "id 14"
+    puts "tone_volume = #{@tone_volume}"
+    puts "binaural_volume = #{@binaural_volume}"
+    puts "ambient_volume = #{@ambient_volume}"
     puts "ambient_program = #{@ambient_program}"
   end
 
@@ -84,12 +102,16 @@ module SoundHelper
     initialize_defaults if !@defaults
     puts "is 02"
     @ambient_sound = get_sound(@ambient_sound, name: @ambient_program, repeat: :forever, delegate: self)
+    @ambient_sound.volume = @ambient_volume
     puts "is 03"
     @binaural_sound = get_sound(@binaural_sound, name: "gnaural.m4a", repeat: :once, delegate: self)
+    @binaural_sound.volume = @binaural_volume
     puts "is 04"
     @in_sound = get_sound(@in_sound, name: "breathe_in_long.m4a", repeat: :once, delegate: self)
+    @in_sound.volume = @tone_volume
     puts "is 05"
     @out_sound = get_sound(@out_sound, name: "breathe_out_long.m4a", repeat: :once, delegate: self)
+    @out_sound.volume = @tone_volume
     puts "is 06"
   end
 end
