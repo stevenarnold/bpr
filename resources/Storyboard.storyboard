@@ -477,7 +477,6 @@
                 <relationship kind="action" name="applicationWillTerminate:"/>
                 <relationship kind="action" name="bpm"/>
                 <relationship kind="action" name="initialize_state"/>
-                <relationship kind="action" name="load_settings"/>
                 <relationship kind="action" name="start_timer"/>
                 <relationship kind="action" name="still_collecting_initial_data"/>
                 <relationship kind="action" name="supportedInterfaceOrientations"/>
@@ -495,9 +494,6 @@
                 <relationship kind="outlet" name="time_to_run" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="timer" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="TimerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimerViewController.h"/>

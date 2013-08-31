@@ -18,7 +18,8 @@
 
   attr_accessor :target_bpm, :settings, :in_sound, :out_sound,
                 :ambient_sound, :binaural_sound, :time_to_run,
-                :act_in_avg, :act_out_avg, :ambient_program, :delegate
+                :act_in_avg, :act_out_avg, :ambient_program, :delegate,
+                :tone_volume
 
   def viewDidLoad
     super
@@ -293,12 +294,10 @@
         @binaural_sound.play
       when :in
         puts "3in_sound = #{@in_sound}"
-        @in_sound.volume = @delegate.bc_controller.tone_volume
-        @in_sound.play
+        play_in_sound
       when :out
         puts "3out_sound = #{@out_sound}"
-        @out_sound.volume = @delegate.bc_controller.tone_volume
-        @out_sound.play
+        play_out_sound
       end
     end
   end

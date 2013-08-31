@@ -17,10 +17,6 @@ class BeatCounterViewController < UIViewController
                 :tone_volume, :ambient_volume, :binaural_volume, :ambient_program,
                 :delegate
 
-  def load_settings
-    initialize_defaults
-  end
-
   def initialize_state
     puts "initializing state"
     initialize_defaults
@@ -36,7 +32,6 @@ class BeatCounterViewController < UIViewController
     @progress_display.text = "Press 'In' Button When Breathing In"
     @in_out_button.setTitle("Breathe In", forState:UIControlStateNormal)
     @in_out_button.setTitle("Breathe In", forState:UIControlStateHighlighted)
-    load_settings
     puts "state initialized"
   end
 
@@ -130,6 +125,7 @@ class BeatCounterViewController < UIViewController
     @timer_vc.out_sound = @out_sound
     @timer_vc.ambient_sound = @ambient_sound
     @timer_vc.binaural_sound = @binaural_sound
+    @timer_vc.tone_volume = @tone_volume
     UIView.beginAnimations(nil, context:nil)
     UIView.setAnimationDuration(0.0)
     UIView.setAnimationTransition(UIViewAnimationTransitionFlipFromRight,
@@ -159,13 +155,11 @@ class BeatCounterViewController < UIViewController
       if was_breathing_in
         @out_count += 1
         @act_out_avg = ((@act_out_avg * (@out_count - 1)) + interval) / @out_count
-        @out_sound.volume = @tone_volume
-        @out_sound.play
+        play_out_sound
       else
         @in_count += 1
         @act_in_avg = ((@act_in_avg * (@in_count - 1)) + interval) / @in_count
-        @in_sound.volume = @tone_volume
-        @in_sound.play
+        play_in_sound
       end
       toggle_breathing_state
     else
@@ -183,7 +177,6 @@ class BeatCounterViewController < UIViewController
     puts "settings 01: @settings = #{@settings}"
     @view = view
     show_view(view, @navigationController)
-    # @navigationController.pushViewController(@settings, animated:true)
     puts "settings 05"
   end
 end

@@ -184,7 +184,6 @@
 -(IBAction) initialize_sound;
 -(IBAction) settingsViewControllerDidEnd:(id) sender;
 -(IBAction) userDefaultsDidChange;
--(IBAction) prepare_picker;
 
 @end
 
@@ -203,7 +202,6 @@
 -(IBAction) tap_in_out_button:(id) sender;
 -(IBAction) tap_reset:(id) sender;
 -(IBAction) tap_settings:(id) sender;
--(IBAction) load_settings;
 -(IBAction) initialize_state;
 -(IBAction) viewDidLoad;
 -(IBAction) applicationWillTerminate:(id) notification;
