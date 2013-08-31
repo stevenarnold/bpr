@@ -4,7 +4,7 @@ class AppDelegate
 
   outlet :window, UIWindow
   attr_accessor :sb, :settings, :ambient, :binaural, :navigationController,
-                :bc_controller, :defaults, :first_run
+                :bc_controller, :defaults
 
   def initialize_sound
     # sessionCategory = kAudioSessionCategory_MediaPlayback;
@@ -19,14 +19,21 @@ class AppDelegate
     @bc_controller.show_view(@navigationController.view, @bc_controller)
   end
 
-  def userDefaultsDidChange
-    # App.alert("user defaults changed.  binauralVolume = #{NSUserDefaults.standardUserDefaults.integerForKey('binauralVolume')}")
-    if !@first_run
-      @bc_controller.initialize_state
+  def is_first_run?
+    @system_settings = NSUserDefaults.alloc.init
+    if @system_settings.boolForKey('first_run')
+      puts "is NOT first run"
+      false
+    else
+      @system_settings.setBool(true, forKey: 'first_run')
+      @system_settings.synchronize
+      puts "is first run"
+      true
     end
   end
 
-  def prepare_picker
+  def userDefaultsDidChange
+    # Do nothing, this is handled in bc_controller
   end
 
   def application(application, didFinishLaunchingWithOptions:launchOptions)
@@ -46,6 +53,6 @@ class AppDelegate
     initialize_sound
     @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
     @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    userDefaultsDidChange
+    # userDefaultsDidChange
   end
 end

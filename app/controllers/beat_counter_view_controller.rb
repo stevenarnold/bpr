@@ -43,6 +43,10 @@ class BeatCounterViewController < UIViewController
   def viewDidLoad
     super
     @delegate = UIApplication.sharedApplication.delegate
+    NSNotificationCenter.defaultCenter.addObserver(self,
+      selector:"initialize_defaults:",
+      name:NSUserDefaultsDidChangeNotification,
+      object:nil)
     puts "delegate = #{@delegate}"
     initialize_state
     puts "state initialized"

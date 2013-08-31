@@ -21,13 +21,13 @@ module SoundHelper
   end
 
   def play_in_sound
-    in_sound.volume = @tone_volume
-    play(in_sound)
+    @in_sound.volume = @tone_volume
+    play(@in_sound)
   end
 
   def play_out_sound
-    out_sound.volume = @tone_volume
-    play(out_sound)
+    @out_sound.volume = @tone_volume
+    play(@out_sound)
   end
 
   def get_sound(sound, name: name, repeat: repeat, delegate: delegate)
@@ -59,7 +59,6 @@ module SoundHelper
   end
 
   def initialize_defaults(delegate=nil)
-    @delegate = delegate if delegate
     puts "id 01"
     @defaults = @delegate.defaults if !@defaults
     puts "id 02: @defaults = #{@defaults}"
@@ -71,10 +70,9 @@ module SoundHelper
     puts "id 05"
     @ambient_program = @defaults.objectForKey('ambientProgram')
     puts "id 06"
-    if @tone_volume == 0 && @binaural_volume == 0 && @ambient_volume == 0
+    if @delegate.is_first_run?
+    # if @tone_volume == 0 && @binaural_volume == 0 && @ambient_volume == 0
       puts "id 07"
-      @delegate.first_run = true
-      puts "id 08"
       @tone_volume = @binaural_volume = @ambient_volume = 0.50
       puts "id 09"
       @defaults.setFloat(50.0, forKey: 'binauralVolume')
@@ -83,7 +81,6 @@ module SoundHelper
       puts "id 11"
       @defaults.setFloat(50.0, forKey: 'toneVolume')
     end
-    @delegate.first_run = false
     puts "id 13"
     @ambient_program = "rain.mp3" unless valid_program?(@ambient_program)
     puts "id 14"

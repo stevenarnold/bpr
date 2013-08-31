@@ -1,0 +1,728 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<string_constant name='KIASKKeyboardType' nsstring='true' value='KeyboardType'/>
+<string_constant name='KIASKKeyboardURL' nsstring='true' value='URL'/>
+<string_constant name='kIASKAdjustsFontSizeToFitWidth' nsstring='true' value='IASKAdjustsFontSizeToFitWidth'/>
+<string_constant name='kIASKAppSettingChanged' nsstring='true' value='kAppSettingChanged'/>
+<string_constant name='kIASKAutoCapAllCharacters' nsstring='true' value='AllCharacters'/>
+<string_constant name='kIASKAutoCapNone' nsstring='true' value='None'/>
+<string_constant name='kIASKAutoCapSentences' nsstring='true' value='Sentences'/>
+<string_constant name='kIASKAutoCapWords' nsstring='true' value='Words'/>
+<string_constant name='kIASKAutoCorrDefault' nsstring='true' value='Default'/>
+<string_constant name='kIASKAutoCorrNo' nsstring='true' value='No'/>
+<string_constant name='kIASKAutoCorrYes' nsstring='true' value='Yes'/>
+<string_constant name='kIASKAutoCorrectionType' nsstring='true' value='AutocorrectionType'/>
+<string_constant name='kIASKAutocapitalizationType' nsstring='true' value='AutocapitalizationType'/>
+<string_constant name='kIASKButtonAction' nsstring='true' value='IASKButtonAction'/>
+<string_constant name='kIASKButtonClass' nsstring='true' value='IASKButtonClass'/>
+<string_constant name='kIASKButtonSpecifier' nsstring='true' value='IASKButtonSpecifier'/>
+<string_constant name='kIASKCellImage' nsstring='true' value='IASKCellImage'/>
+<string_constant name='kIASKCustomViewSpecifier' nsstring='true' value='IASKCustomViewSpecifier'/>
+<string_constant name='kIASKDefaultValue' nsstring='true' value='DefaultValue'/>
+<string_constant name='kIASKFalseValue' nsstring='true' value='FalseValue'/>
+<string_constant name='kIASKFile' nsstring='true' value='File'/>
+<string_constant name='kIASKFooterText' nsstring='true' value='FooterText'/>
+<string_constant name='kIASKIsSecure' nsstring='true' value='IsSecure'/>
+<string_constant name='kIASKKey' nsstring='true' value='Key'/>
+<string_constant name='kIASKKeyboardASCIICapable' nsstring='true' value='AsciiCapable'/>
+<string_constant name='kIASKKeyboardAlphabet' nsstring='true' value='Alphabet'/>
+<string_constant name='kIASKKeyboardDecimalPad' nsstring='true' value='DecimalPad'/>
+<string_constant name='kIASKKeyboardEmailAddress' nsstring='true' value='EmailAddress'/>
+<string_constant name='kIASKKeyboardNamePhonePad' nsstring='true' value='NamePhonePad'/>
+<string_constant name='kIASKKeyboardNumberPad' nsstring='true' value='NumberPad'/>
+<string_constant name='kIASKKeyboardNumbersAndPunctuation' nsstring='true' value='NumbersAndPunctuation'/>
+<string_constant name='kIASKKeyboardPhonePad' nsstring='true' value='PhonePad'/>
+<string_constant name='kIASKMailComposeBccRecipents' nsstring='true' value='IASKMailComposeBccRecipents'/>
+<string_constant name='kIASKMailComposeBody' nsstring='true' value='IASKMailComposeBody'/>
+<string_constant name='kIASKMailComposeBodyIsHTML' nsstring='true' value='IASKMailComposeBodyIsHTML'/>
+<string_constant name='kIASKMailComposeCcRecipents' nsstring='true' value='IASKMailComposeCcRecipents'/>
+<string_constant name='kIASKMailComposeSpecifier' nsstring='true' value='IASKMailComposeSpecifier'/>
+<string_constant name='kIASKMailComposeSubject' nsstring='true' value='IASKMailComposeSubject'/>
+<string_constant name='kIASKMailComposeToRecipents' nsstring='true' value='IASKMailComposeToRecipents'/>
+<string_constant name='kIASKMaximumValue' nsstring='true' value='MaximumValue'/>
+<string_constant name='kIASKMaximumValueImage' nsstring='true' value='MaximumValueImage'/>
+<string_constant name='kIASKMinimumValue' nsstring='true' value='MinimumValue'/>
+<string_constant name='kIASKMinimumValueImage' nsstring='true' value='MinimumValueImage'/>
+<string_constant name='kIASKOpenURLSpecifier' nsstring='true' value='IASKOpenURLSpecifier'/>
+<string_constant name='kIASKPSChildPaneSpecifier' nsstring='true' value='PSChildPaneSpecifier'/>
+<string_constant name='kIASKPSGroupSpecifier' nsstring='true' value='PSGroupSpecifier'/>
+<string_constant name='kIASKPSMultiValueSpecifier' nsstring='true' value='PSMultiValueSpecifier'/>
+<string_constant name='kIASKPSSliderSpecifier' nsstring='true' value='PSSliderSpecifier'/>
+<string_constant name='kIASKPSTextFieldSpecifier' nsstring='true' value='PSTextFieldSpecifier'/>
+<string_constant name='kIASKPSTitleValueSpecifier' nsstring='true' value='PSTitleValueSpecifier'/>
+<string_constant name='kIASKPSToggleSwitchSpecifier' nsstring='true' value='PSToggleSwitchSpecifier'/>
+<string_constant name='kIASKPreferenceSpecifiers' nsstring='true' value='PreferenceSpecifiers'/>
+<string_constant name='kIASKTextLabelAlignment' nsstring='true' value='IASKTextAlignment'/>
+<string_constant name='kIASKTextLabelAlignmentCenter' nsstring='true' value='IASKUITextAlignmentCenter'/>
+<string_constant name='kIASKTextLabelAlignmentLeft' nsstring='true' value='IASKUITextAlignmentLeft'/>
+<string_constant name='kIASKTextLabelAlignmentRight' nsstring='true' value='IASKUITextAlignmentRight'/>
+<string_constant name='kIASKTitle' nsstring='true' value='Title'/>
+<string_constant name='kIASKTitles' nsstring='true' value='Titles'/>
+<string_constant name='kIASKTrueValue' nsstring='true' value='TrueValue'/>
+<string_constant name='kIASKType' nsstring='true' value='Type'/>
+<string_constant name='kIASKValues' nsstring='true' value='Values'/>
+<string_constant name='kIASKViewControllerClass' nsstring='true' value='IASKViewControllerClass'/>
+<string_constant name='kIASKViewControllerSelector' nsstring='true' value='IASKViewControllerSelector'/>
+<enum name='kCFCoreFoundationVersionNumber_iPhoneOS_4_0' value='550.32'/>
+<enum name='kCFCoreFoundationVersionNumber_iPhoneOS_4_1' value='550.38'/>
+<enum name='kIASKHorizontalPaddingGroupTitles' value='19'/>
+<enum name='kIASKLabelFontSize' value='17'/>
+<enum name='kIASKMaxLabelWidth' value='240'/>
+<enum name='kIASKMinLabelWidth' value='97'/>
+<enum name='kIASKMinValueWidth' value='35'/>
+<enum name='kIASKMinimumFontSize' value='12.0f'/>
+<enum name='kIASKPaddingLeft' value='9'/>
+<enum name='kIASKPaddingRight' value='10'/>
+<enum name='kIASKSectionHeaderIndex' value='0'/>
+<enum name='kIASKSliderImagesPadding' value='43'/>
+<enum name='kIASKSliderNoImagesPadding' value='11'/>
+<enum name='kIASKSpacing' value='5'/>
+<enum name='kIASKVerticalPaddingGroupTitles' value='15'/>
+<class name='IASKAbstractSettingsStore'>
+<method selector='objectForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg type='@' declared_type='id' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='synchronize'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+</class>
+<class name='IASKAppSettingsViewController'>
+<method selector='delegate'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='dismiss:'>
+<arg type='@' declared_type='id' name='sender' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='file'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='hiddenKeys'>
+<retval type='@' declared_type='NSSet*'/>
+</method>
+<method selector='setDelegate:'>
+<arg type='@' declared_type='id' name='delegate' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setFile:'>
+<arg type='@' declared_type='NSString*' name='file' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setHiddenKeys:'>
+<arg type='@' declared_type='NSSet*' name='hiddenKeys' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setHiddenKeys:animated:'>
+<arg type='@' declared_type='NSSet*' name='hiddenKeys' index='0'/>
+<arg type='B' declared_type='BOOL' name='animated' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setShowCreditsFooter:'>
+<arg type='B' declared_type='BOOL' name='showCreditsFooter' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setShowDoneButton:'>
+<arg type='B' declared_type='BOOL' name='showDoneButton' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='showCreditsFooter'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='showDoneButton'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='synchronizeSettings'>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='IASKAppSettingsWebViewController'>
+<method selector='initWithFile:key:'>
+<arg type='@' declared_type='NSString*' name='htmlFileName' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='setUrl:'>
+<arg type='@' declared_type='NSURL*' name='url' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setWebView:'>
+<arg type='@' declared_type='UIWebView*' name='webView' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='url'>
+<retval type='@' declared_type='NSURL*'/>
+</method>
+<method selector='webView'>
+<retval type='@' declared_type='UIWebView*'/>
+</method>
+</class>
+<class name='IASKPSSliderSpecifierViewCell'>
+<method selector='maxImage'>
+<retval type='@' declared_type='UIImageView*'/>
+</method>
+<method selector='minImage'>
+<retval type='@' declared_type='UIImageView*'/>
+</method>
+<method selector='setMaxImage:'>
+<arg type='@' declared_type='UIImageView*' name='maxImage' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMinImage:'>
+<arg type='@' declared_type='UIImageView*' name='minImage' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSlider:'>
+<arg type='@' declared_type='IASKSlider*' name='slider' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='slider'>
+<retval type='@' declared_type='IASKSlider*'/>
+</method>
+</class>
+<class name='IASKPSTextFieldSpecifierViewCell'>
+<method selector='setTextField:'>
+<arg type='@' declared_type='IASKTextField*' name='textField' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='textField'>
+<retval type='@' declared_type='IASKTextField*'/>
+</method>
+</class>
+<class name='IASKSettingsReader'>
+<method selector='applicationBundle'>
+<retval type='@' declared_type='NSBundle*'/>
+</method>
+<method selector='dataSource'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='file:withBundle:suffix:extension:'>
+<arg type='@' declared_type='NSString*' name='file' index='0'/>
+<arg type='@' declared_type='NSString*' name='bundle' index='1'/>
+<arg type='@' declared_type='NSString*' name='suffix' index='2'/>
+<arg type='@' declared_type='NSString*' name='extension' index='3'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='footerTextForSection:'>
+<arg type='i' declared_type='NSInteger' name='section' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='hiddenKeys'>
+<retval type='@' declared_type='NSSet*'/>
+</method>
+<method selector='indexPathForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='@' declared_type='NSIndexPath*'/>
+</method>
+<method selector='initWithFile:'>
+<arg type='@' declared_type='NSString*' name='file' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithSettingsFileNamed:applicationBundle:'>
+<arg type='@' declared_type='NSString*' name='fileName' index='0'/>
+<arg type='@' declared_type='NSBundle*' name='bundle' index='1'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='keyForSection:'>
+<arg type='i' declared_type='NSInteger' name='section' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='localizationTable'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='locateSettingsFile:'>
+<arg type='@' declared_type='NSString*' name='file' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='numberOfRowsForSection:'>
+<arg type='i' declared_type='NSInteger' name='section' index='0'/>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='numberOfSections'>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='pathForImageNamed:'>
+<arg type='@' declared_type='NSString*' name='image' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='platformSuffixForInterfaceIdiom:'>
+<arg type='i' declared_type='UIUserInterfaceIdiom' name='interfaceIdiom' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='setDataSource:'>
+<arg type='@' declared_type='NSArray*' name='dataSource' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setHiddenKeys:'>
+<arg type='@' declared_type='NSSet*' name='hiddenKeys' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setLocalizationTable:'>
+<arg type='@' declared_type='NSString*' name='localizationTable' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsBundle'>
+<retval type='@' declared_type='NSBundle*'/>
+</method>
+<method selector='settingsDictionary'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='specifierForIndexPath:'>
+<arg type='@' declared_type='NSIndexPath*' name='indexPath' index='0'/>
+<retval type='@' declared_type='IASKSpecifier*'/>
+</method>
+<method selector='specifierForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='@' declared_type='IASKSpecifier*'/>
+</method>
+<method selector='titleForSection:'>
+<arg type='i' declared_type='NSInteger' name='section' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='titleForStringId:'>
+<arg type='@' declared_type='NSString*' name='stringId' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+</class>
+<class name='IASKSettingsStoreFile'>
+<method selector='filePath'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='initWithPath:'>
+<arg type='@' declared_type='NSString*' name='path' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='IASKSettingsStoreUserDefaults'>
+<method selector='defaults'>
+<retval type='@' declared_type='NSUserDefaults*'/>
+</method>
+<method selector='init'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithUserDefaults:'>
+<arg type='@' declared_type='NSUserDefaults*' name='defaults' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='IASKSlider'>
+<method selector='key'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='setKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='IASKSpecifier'>
+<method selector='adjustsFontSizeToFitWidth'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='autoCorrectionType'>
+<retval type='i' declared_type='UITextAutocorrectionType'/>
+</method>
+<method selector='autocapitalizationType'>
+<retval type='i' declared_type='UITextAutocapitalizationType'/>
+</method>
+<method selector='buttonAction'>
+<retval type=':' declared_type='SEL'/>
+</method>
+<method selector='buttonClass'>
+<retval type='#' declared_type='Class'/>
+</method>
+<method selector='cellImage'>
+<retval type='@' declared_type='UIImage*'/>
+</method>
+<method selector='defaultBoolValue'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='defaultStringValue'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='defaultValue'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='falseValue'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='file'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='footerText'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='highlightedCellImage'>
+<retval type='@' declared_type='UIImage*'/>
+</method>
+<method selector='initWithSpecifier:'>
+<arg type='@' declared_type='NSDictionary*' name='specifier' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isSecure'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='key'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='keyboardType'>
+<retval type='i' declared_type='UIKeyboardType'/>
+</method>
+<method selector='localizedObjectForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='maximumValue'>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='maximumValueImage'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='minimumValue'>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='minimumValueImage'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='multipleTitles'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='multipleValues'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='multipleValuesCount'>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='setSettingsReader:'>
+<arg type='@' declared_type='IASKSettingsReader*' name='settingsReader' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSpecifierDict:'>
+<arg type='@' declared_type='NSDictionary*' name='specifierDict' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsReader'>
+<retval type='@' declared_type='IASKSettingsReader*'/>
+</method>
+<method selector='specifierDict'>
+<retval type='@' declared_type='NSDictionary*'/>
+</method>
+<method selector='textAlignment'>
+<retval type='i' declared_type='UITextAlignment'/>
+</method>
+<method selector='title'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='titleForCurrentValue:'>
+<arg type='@' declared_type='id' name='currentValue' index='0'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='trueValue'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='type'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='viewControllerClass'>
+<retval type='#' declared_type='Class'/>
+</method>
+<method selector='viewControllerSelector'>
+<retval type=':' declared_type='SEL'/>
+</method>
+</class>
+<class name='IASKSpecifierValuesViewController'>
+<method selector='checkedItem'>
+<retval type='@' declared_type='NSIndexPath*'/>
+</method>
+<method selector='currentSpecifier'>
+<retval type='@' declared_type='IASKSpecifier*'/>
+</method>
+<method selector='setCheckedItem:'>
+<arg type='@' declared_type='NSIndexPath*' name='checkedItem' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCurrentSpecifier:'>
+<arg type='@' declared_type='IASKSpecifier*' name='currentSpecifier' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setTableView:'>
+<arg type='@' declared_type='UITableView*' name='tableView' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='tableView'>
+<retval type='@' declared_type='UITableView*'/>
+</method>
+</class>
+<class name='IASKSwitch'>
+<method selector='key'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='setKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='IASKTextField'>
+<method selector='key'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='setKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='boolForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='doubleForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='d' declared_type='double'/>
+</method>
+<method selector='floatForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='integerForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='i' declared_type='int'/>
+</method>
+<method selector='objectForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='setBool:forKey:'>
+<arg type='B' declared_type='BOOL' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDouble:forKey:'>
+<arg type='d' declared_type='double' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setFloat:forKey:'>
+<arg type='f' declared_type='float' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setInteger:forKey:'>
+<arg type='i' declared_type='int' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setObject:forKey:'>
+<arg type='@' declared_type='id' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSettingsReader:'>
+<arg type='@' declared_type='IASKSettingsReader*' name='settingsReader' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSettingsStore:'>
+<arg type='@' declared_type='id' name='settingsStore' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsReader'>
+<retval type='@' declared_type='IASKSettingsReader*'/>
+</method>
+<method selector='settingsStore'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='settingsViewController:buttonTappedForKey:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsViewController:buttonTappedForSpecifier:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsViewController:mailComposeBodyForSpecifier:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='settingsViewController:mailComposeController:didFinishWithResult:error:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='MFMailComposeViewController*' name='controller' index='1'/>
+<arg type='i' declared_type='MFMailComposeResult' name='result' index='2'/>
+<arg type='@' declared_type='NSError*' name='error' index='3'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsViewController:tableView:didSelectCustomViewSpecifier:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<arg type='@' declared_type='UITableView*' name='tableView' index='1'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='2'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='settingsViewController:tableView:heightForHeaderForSection:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='UITableView*' name='tableView' index='1'/>
+<arg type='i' declared_type='NSInteger' name='section' index='2'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='settingsViewController:tableView:viewForHeaderForSection:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='UITableView*' name='tableView' index='1'/>
+<arg type='i' declared_type='NSInteger' name='section' index='2'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method selector='settingsViewController:viewControllerForMailComposeViewForSpecifier:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='@' declared_type='UIViewController*'/>
+</method>
+<method selector='settingsViewControllerDidEnd:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='synchronize'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='tableView:cellForSpecifier:'>
+<arg type='@' declared_type='UITableView*' name='tableView' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='@' declared_type='UITableViewCell*'/>
+</method>
+<method selector='tableView:heightForSpecifier:'>
+<arg type='@' declared_type='UITableView*' name='tableView' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+</class>
+<informal_protocol name='IASKSettingsDelegate'>
+<method type='v16@0:4@8@12' selector='settingsViewController:buttonTappedForKey:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v16@0:4@8@12' selector='settingsViewController:buttonTappedForSpecifier:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='@16@0:4@8@12' selector='settingsViewController:mailComposeBodyForSpecifier:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method type='v24@0:4@8@12i16@20' selector='settingsViewController:mailComposeController:didFinishWithResult:error:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='MFMailComposeViewController*' name='controller' index='1'/>
+<arg type='i' declared_type='MFMailComposeResult' name='result' index='2'/>
+<arg type='@' declared_type='NSError*' name='error' index='3'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8@12@16' selector='settingsViewController:tableView:didSelectCustomViewSpecifier:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<arg type='@' declared_type='UITableView*' name='tableView' index='1'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='2'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='f20@0:4@8@12i16' selector='settingsViewController:tableView:heightForHeaderForSection:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='UITableView*' name='tableView' index='1'/>
+<arg type='i' declared_type='NSInteger' name='section' index='2'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method type='@20@0:4@8@12i16' selector='settingsViewController:tableView:viewForHeaderForSection:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='UITableView*' name='tableView' index='1'/>
+<arg type='i' declared_type='NSInteger' name='section' index='2'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method type='@16@0:4@8@12' selector='settingsViewController:viewControllerForMailComposeViewForSpecifier:'>
+<arg type='@' declared_type='id' name='settingsViewController' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='@' declared_type='UIViewController*'/>
+</method>
+<method type='v12@0:4@8' selector='settingsViewControllerDidEnd:'>
+<arg type='@' declared_type='IASKAppSettingsViewController*' name='sender' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='@16@0:4@8@12' selector='tableView:cellForSpecifier:'>
+<arg type='@' declared_type='UITableView*' name='tableView' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='@' declared_type='UITableViewCell*'/>
+</method>
+<method type='f16@0:4@8@12' selector='tableView:heightForSpecifier:'>
+<arg type='@' declared_type='UITableView*' name='tableView' index='0'/>
+<arg type='@' declared_type='IASKSpecifier*' name='specifier' index='1'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IASKSettingsStore'>
+<method type='B12@0:4@8' selector='boolForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='d12@0:4@8' selector='doubleForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='d' declared_type='double'/>
+</method>
+<method type='f12@0:4@8' selector='floatForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='f' declared_type='float'/>
+</method>
+<method type='i12@0:4@8' selector='integerForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='i' declared_type='int'/>
+</method>
+<method type='@12@0:4@8' selector='objectForKey:'>
+<arg type='@' declared_type='NSString*' name='key' index='0'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method type='v16@0:4B8@12' selector='setBool:forKey:'>
+<arg type='B' declared_type='BOOL' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4d8@16' selector='setDouble:forKey:'>
+<arg type='d' declared_type='double' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v16@0:4f8@12' selector='setFloat:forKey:'>
+<arg type='f' declared_type='float' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v16@0:4i8@12' selector='setInteger:forKey:'>
+<arg type='i' declared_type='int' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v16@0:4@8@12' selector='setObject:forKey:'>
+<arg type='@' declared_type='id' name='value' index='0'/>
+<arg type='@' declared_type='NSString*' name='key' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='B8@0:4' selector='synchronize'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+</informal_protocol>
+<informal_protocol name='IASKViewController'>
+<method type='v12@0:4@8' selector='setSettingsReader:'>
+<arg type='@' declared_type='IASKSettingsReader*' name='settingsReader' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='setSettingsStore:'>
+<arg type='@' declared_type='id' name='settingsStore' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='@8@0:4' selector='settingsReader'>
+<retval type='@' declared_type='IASKSettingsReader*'/>
+</method>
+<method type='@8@0:4' selector='settingsStore'>
+<retval type='@' declared_type='id'/>
+</method>
+</informal_protocol>
+</signatures>
