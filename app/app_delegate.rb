@@ -4,7 +4,7 @@ class AppDelegate
 
   outlet :window, UIWindow
   attr_accessor :sb, :settings, :ambient, :binaural, :navigationController,
-                :bc_controller, :defaults
+                :bc_controller, :defaults, :system_settings
 
   def initialize_sound
     # sessionCategory = kAudioSessionCategory_MediaPlayback;
@@ -19,14 +19,17 @@ class AppDelegate
     @bc_controller.show_view(@navigationController.view, @bc_controller)
   end
 
+  def system_settings
+    @system_settings ||= NSUserDefaults.alloc.init
+  end
+
   def is_first_run?
-    @system_settings = NSUserDefaults.alloc.init
-    if @system_settings.boolForKey('first_run')
+    if system_settings.boolForKey('first_run')
       puts "is NOT first run"
       false
     else
-      @system_settings.setBool(true, forKey: 'first_run')
-      @system_settings.synchronize
+      system_settings.setBool(true, forKey: 'first_run')
+      system_settings.synchronize
       puts "is first run"
       true
     end
@@ -53,6 +56,5 @@ class AppDelegate
     initialize_sound
     @navigationController = UINavigationController.alloc.initWithRootViewController(@settings)
     @bc_controller = @window.rootViewController = @sb.instantiateViewControllerWithIdentifier("beat_counter")
-    # userDefaultsDidChange
   end
 end

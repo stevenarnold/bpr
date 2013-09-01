@@ -183,6 +183,7 @@
 
 -(IBAction) initialize_sound;
 -(IBAction) settingsViewControllerDidEnd:(id) sender;
+-(IBAction) system_settings;
 -(IBAction) userDefaultsDidChange;
 
 @end
@@ -204,6 +205,7 @@
 -(IBAction) tap_settings:(id) sender;
 -(IBAction) initialize_state;
 -(IBAction) viewDidLoad;
+-(IBAction) textFieldDidEndEditing:(id) field;
 -(IBAction) doneWithNumberPad;
 -(IBAction) applicationWillTerminate:(id) notification;
 -(IBAction) supportedInterfaceOrientations;

@@ -50,7 +50,7 @@
                                     <action selector="tap_reset:" destination="IAD-Ww-qbJ" eventType="touchUpInside" id="GJS-Tr-kiW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-lr-XkW">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-lr-XkW">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="ZDe-Vb-7D2"/>
                                 </constraints>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.729411780834198" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1pu-lr-XkW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="46S-UD-MNt"/>
                             <constraint firstItem="Z0a-T6-d4W" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="85" id="4s8-xB-zpC"/>
@@ -201,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.72941178080000002" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="daB-wf-paL" firstAttribute="leading" secondItem="xfc-K9-s5v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1OY-dB-nJU"/>
                             <constraint firstItem="hXN-OJ-Eob" firstAttribute="top" secondItem="xfc-K9-s5v" secondAttribute="top" constant="19" id="7ws-ug-vyw"/>
@@ -510,6 +510,9 @@
                 <relationship kind="outlet" name="time_to_run" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="timer" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="TimerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimerViewController.h"/>

@@ -133,7 +133,6 @@
   def tap_reset sender
     reset
     # Now send the user back to the beat controller
-    # @beat_vc ||= @sb.instantiateViewControllerWithIdentifier("beat_counter")
     @beat_vc = @delegate.bc_controller
     @beat_vc.initialize_state
     puts "about to switch back to beat controller"

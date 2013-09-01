@@ -13,6 +13,9 @@ class BeatCounterViewController < UIViewController
   ib_action :tap_reset
   ib_action :tap_settings
 
+  TIME_TO_RUN_BTN = 0
+  BPM_BTN = 1
+
   attr_accessor :in_sound, :out_sound, :ambient_sound, :binaural_sound, :timer,
                 :tone_volume, :ambient_volume, :binaural_volume, :ambient_program,
                 :delegate, :ending_sound
@@ -32,6 +35,12 @@ class BeatCounterViewController < UIViewController
     @progress_display.text = "Press 'In' Button When Breathing In"
     @in_out_button.setTitle("Breathe In", forState:UIControlStateNormal)
     @in_out_button.setTitle("Breathe In", forState:UIControlStateHighlighted)
+    if ((@target_time_to_run = @delegate.system_settings.floatForKey('time_to_run')) != 0)
+      @time_to_run.text = @target_time_to_run.to_s
+    end
+    if ((@target_bpm = @delegate.system_settings.floatForKey('bpm')) != 0)
+      @target.text = @target_bpm.to_s
+    end
     puts "state initialized"
   end
 
@@ -62,14 +71,28 @@ class BeatCounterViewController < UIViewController
                                                                target: self,
                                                                action: :doneWithNumberPad)]
     numberToolbar.sizeToFit
-    @target.keyboardType = UIKeyboardTypeNumberPad
+    @target.keyboardType = UIKeyboardTypeDecimalPad
     @target.inputAccessoryView = numberToolbar
-    @time_to_run.keyboardType = UIKeyboardTypeNumberPad
+    @target.delegate = self
+    @time_to_run.keyboardType = UIKeyboardTypeDecimalPad
     @time_to_run.inputAccessoryView = numberToolbar
+    @time_to_run.delegate = self
     puts "vdl 05"
     
     initialize_sounds
     puts "beat viewDidLoad done"
+  end
+
+  def textFieldDidEndEditing(field)
+    case field.tag
+    when TIME_TO_RUN_BTN
+      key = 'time_to_run'
+    when BPM_BTN
+      key = 'bpm'
+    else
+      raise 'InvalidFieldEndedEditing'
+    end
+    @delegate.system_settings.setFloat(field.text.to_f, forKey: key)
   end
 
   def doneWithNumberPad
@@ -83,15 +106,6 @@ class BeatCounterViewController < UIViewController
 
   def supportedInterfaceOrientations
     UIInterfaceOrientationMaskPortrait
-  end
-
-  def alert(title, message, btn_title="OK")
-    @an_alert = UIAlertView.alloc.initWithTitle(title,
-        message: message,
-        delegate: nil,
-        cancelButtonTitle: btn_title,
-        otherButtonTitles: nil)
-    @an_alert.show
   end
 
   def still_collecting_initial_data
