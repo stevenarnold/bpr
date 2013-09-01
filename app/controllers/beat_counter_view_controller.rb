@@ -15,7 +15,7 @@ class BeatCounterViewController < UIViewController
 
   attr_accessor :in_sound, :out_sound, :ambient_sound, :binaural_sound, :timer,
                 :tone_volume, :ambient_volume, :binaural_volume, :ambient_program,
-                :delegate
+                :delegate, :ending_sound
 
   def initialize_state
     puts "initializing state"
@@ -52,10 +52,29 @@ class BeatCounterViewController < UIViewController
     @settings.showDoneButton = true
     @navigationController = @delegate.navigationController
     @window = UIApplication.sharedApplication.keyWindow
+    numberToolbar = UIToolbar.alloc.initWithFrame(CGRectMake(0,0,320,50))
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent
+    numberToolbar.items = [UIBarButtonItem.alloc.initWithBarButtonSystemItem(UIBarButtonSystemItemFlexibleSpace,
+                                                               target: nil,
+                                                               action: nil),
+                           UIBarButtonItem.alloc.initWithTitle("Apply",
+                                                               style: UIBarButtonItemStyleDone,
+                                                               target: self,
+                                                               action: :doneWithNumberPad)]
+    numberToolbar.sizeToFit
+    @target.keyboardType = UIKeyboardTypeNumberPad
+    @target.inputAccessoryView = numberToolbar
+    @time_to_run.keyboardType = UIKeyboardTypeNumberPad
+    @time_to_run.inputAccessoryView = numberToolbar
     puts "vdl 05"
     
     initialize_sounds
     puts "beat viewDidLoad done"
+  end
+
+  def doneWithNumberPad
+    @target.resignFirstResponder
+    @time_to_run.resignFirstResponder
   end
 
   def applicationWillTerminate(notification)
@@ -126,6 +145,7 @@ class BeatCounterViewController < UIViewController
     @timer_vc.ambient_sound = @ambient_sound
     @timer_vc.binaural_sound = @binaural_sound
     @timer_vc.tone_volume = @tone_volume
+    @timer_vc.ending_sound = @ending_sound
     UIView.beginAnimations(nil, context:nil)
     UIView.setAnimationDuration(0.0)
     UIView.setAnimationTransition(UIViewAnimationTransitionFlipFromRight,

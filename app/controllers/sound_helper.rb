@@ -30,6 +30,11 @@ module SoundHelper
     play(@out_sound)
   end
 
+  def play_ending_sound
+    @ending_sound.volume = 0.50
+    play(@ending_sound)
+  end
+
   def get_sound(sound, name: name, repeat: repeat, delegate: delegate)
     # Note: On the simulator, this might fail for some sound inputs on the host system.
     # The built-in mic worked for me.  The system sound input has nothing to do with 
@@ -110,5 +115,9 @@ module SoundHelper
     @out_sound = get_sound(@out_sound, name: "breathe_out_long.m4a", repeat: :once, delegate: self)
     @out_sound.volume = @tone_volume
     puts "is 06"
+    if !@program_ending
+      @ending_sound = get_sound(@ending_sound, name: "gongs_ending.m4a", repeat: :once, delegate: self)
+      @ending_sound.volume = 0.5
+    end
   end
 end

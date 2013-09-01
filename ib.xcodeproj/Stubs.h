@@ -204,6 +204,7 @@
 -(IBAction) tap_settings:(id) sender;
 -(IBAction) initialize_state;
 -(IBAction) viewDidLoad;
+-(IBAction) doneWithNumberPad;
 -(IBAction) applicationWillTerminate:(id) notification;
 -(IBAction) supportedInterfaceOrientations;
 -(IBAction) still_collecting_initial_data;
@@ -241,7 +242,6 @@
 -(IBAction) ratio_too_low;
 -(IBAction) time_since_start;
 -(IBAction) remaining_time;
--(IBAction) play_ending_sound;
 -(IBAction) update_timer;
 -(IBAction) reset;
 -(IBAction) start_timer;

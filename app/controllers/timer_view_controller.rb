@@ -19,7 +19,7 @@
   attr_accessor :target_bpm, :settings, :in_sound, :out_sound,
                 :ambient_sound, :binaural_sound, :time_to_run,
                 :act_in_avg, :act_out_avg, :ambient_program, :delegate,
-                :tone_volume
+                :tone_volume, :ending_sound
 
   def viewDidLoad
     super
@@ -33,6 +33,7 @@
     @window = UIApplication.sharedApplication.keyWindow
     @target_bpm_disp.text = "%0.2f" % target_bpm.to_f
     @actual_bpm_disp.text = "%0.2f" % bpm
+    @program_ending = false
 
     @static_algorithm = lambda do
       if @act_in_avg + @act_out_avg > @target_bpm
@@ -108,16 +109,14 @@
     (@time_to_run * 60) - time_since_start
   end
 
-  def play_ending_sound
-  end
-
   def update_timer
     puts "begin update_timer @act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}"
     if Time.now - @last_tick >= 1
       @last_tick = Time.now
       if remaining_time <= 0
-        @timer_thread.invalidate
+        @program_ending = true
         play_ending_sound
+        tap_reset(self)
       else
         mins = (remaining_time / 60).floor
         secs = remaining_time % 60
@@ -125,6 +124,10 @@
       end
     end
     puts "end update_timer @act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}"
+  end
+
+  def audioPlayerDidFinishPlaying(sound, successfully: value)
+    @program_ending = !@program_ending if @program_ending
   end
 
   def tap_reset sender
