@@ -98,6 +98,30 @@
 			<key>Type</key>
 			<string>PSSliderSpecifier</string>
 		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>endingSoundVolumeTitle</string>
+			<key>Title</key>
+			<string>Ending Sound Volume</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<integer>50</integer>
+			<key>Key</key>
+			<string>endingSoundVolume</string>
+			<key>MaximumValue</key>
+			<integer>100</integer>
+			<key>MinimumValue</key>
+			<integer>1</integer>
+			<key>Title</key>
+			<string>Ending Sound Volume</string>
+			<key>Type</key>
+			<string>PSSliderSpecifier</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>

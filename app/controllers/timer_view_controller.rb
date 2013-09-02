@@ -19,7 +19,7 @@
   attr_accessor :target_bpm, :settings, :in_sound, :out_sound,
                 :ambient_sound, :binaural_sound, :time_to_run,
                 :act_in_avg, :act_out_avg, :ambient_program, :delegate,
-                :tone_volume, :ending_sound
+                :tone_volume, :ending_sound, :ending_sound_volume
 
   def viewDidLoad
     super

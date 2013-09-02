@@ -10,12 +10,12 @@
             <objects>
                 <viewController restorationIdentifier="beat_counter" storyboardIdentifier="beat_counter" id="IAD-Ww-qbJ" customClass="BeatCounterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KAL-B4-rfi">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wko-q2-nnd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wko-q2-nnd">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="188" id="GgJ-dy-UKg"/>
+                                    <constraint firstAttribute="height" priority="537" constant="188" type="user" id="GgJ-dy-UKg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Tap When Ready to Breathe In">
@@ -37,7 +37,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-7x-HNs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-7x-HNs">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,12 +92,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.729411780834198" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="wko-q2-nnd" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="252" type="user" id="1Cl-5T-F7G"/>
                             <constraint firstAttribute="trailing" secondItem="1pu-lr-XkW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="46S-UD-MNt"/>
                             <constraint firstItem="Z0a-T6-d4W" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="85" id="4s8-xB-zpC"/>
                             <constraint firstItem="AN4-MK-vb7" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5DT-5f-YpT"/>
                             <constraint firstItem="CIk-js-Y0s" firstAttribute="top" secondItem="1pu-lr-XkW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6hC-Xg-3jH"/>
                             <constraint firstAttribute="trailing" secondItem="PfX-7x-HNs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EV8-XV-GYu"/>
-                            <constraint firstAttribute="bottom" secondItem="wko-q2-nnd" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Ehc-Qg-av2"/>
+                            <constraint firstAttribute="bottom" secondItem="wko-q2-nnd" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="Ehc-Qg-av2"/>
                             <constraint firstItem="BVm-24-Sfa" firstAttribute="baseline" secondItem="CIk-js-Y0s" secondAttribute="baseline" type="default" id="FA4-Ux-MnL"/>
                             <constraint firstItem="BqL-fS-C24" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="129" id="Ldb-yR-B4h"/>
                             <constraint firstItem="wko-q2-nnd" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PIR-h0-jYc"/>
@@ -134,12 +135,12 @@
             <objects>
                 <viewController restorationIdentifier="timer" storyboardIdentifier="timer" id="Un8-FE-pSb" customClass="TimerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xfc-K9-s5v">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs5-Fd-Yee">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs5-Fd-Yee">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="188" id="vRm-JB-q1R"/>
+                                    <constraint firstAttribute="height" priority="551" constant="188" type="user" id="vRm-JB-q1R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Breathe In">
@@ -151,7 +152,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tap_in_out_button:" destination="Un8-FE-pSb" eventType="touchUpInside" id="KVD-Xg-6NK"/>
-                                    <action selector="tap_in_out_button:" destination="VIz-mu-Yhb" eventType="touchUpInside" id="c4v-Sh-0Sr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXN-OJ-Eob">
@@ -162,7 +162,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daB-wf-paL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daB-wf-paL">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -204,16 +204,18 @@
                         <color key="backgroundColor" red="0.0" green="0.72941178080000002" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="daB-wf-paL" firstAttribute="leading" secondItem="xfc-K9-s5v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1OY-dB-nJU"/>
+                            <constraint firstItem="Hs5-Fd-Yee" firstAttribute="top" secondItem="xfc-K9-s5v" secondAttribute="top" constant="252" type="user" id="78k-xr-di3"/>
                             <constraint firstItem="hXN-OJ-Eob" firstAttribute="top" secondItem="xfc-K9-s5v" secondAttribute="top" constant="19" id="7ws-ug-vyw"/>
-                            <constraint firstItem="Hs5-Fd-Yee" firstAttribute="top" secondItem="daB-wf-paL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="EgN-mb-I6l"/>
+                            <constraint firstItem="daB-wf-paL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xfc-K9-s5v" secondAttribute="leading" constant="20" type="user" id="ELg-GV-xLL"/>
+                            <constraint firstItem="Hs5-Fd-Yee" firstAttribute="top" secondItem="daB-wf-paL" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="EgN-mb-I6l"/>
                             <constraint firstItem="8iD-di-umI" firstAttribute="top" secondItem="xfc-K9-s5v" secondAttribute="top" constant="124" id="JYs-Xg-qNW"/>
                             <constraint firstItem="3R4-0g-E1s" firstAttribute="leading" secondItem="f0j-dA-1pz" secondAttribute="leading" type="default" id="KuX-vr-QxR"/>
                             <constraint firstItem="3R4-0g-E1s" firstAttribute="baseline" secondItem="zAs-ob-dMQ" secondAttribute="baseline" type="default" id="NGN-eS-zRD"/>
                             <constraint firstAttribute="trailing" secondItem="hXN-OJ-Eob" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NHN-DP-Q1D"/>
                             <constraint firstItem="f0j-dA-1pz" firstAttribute="baseline" secondItem="8iD-di-umI" secondAttribute="baseline" type="default" id="Qjo-9A-0UR"/>
                             <constraint firstItem="dg9-EP-f8o" firstAttribute="centerX" secondItem="hXN-OJ-Eob" secondAttribute="centerX" type="default" id="Zso-TF-rJ3"/>
+                            <constraint firstAttribute="bottom" secondItem="Hs5-Fd-Yee" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="aHZ-q8-DOG"/>
                             <constraint firstItem="dg9-EP-f8o" firstAttribute="top" secondItem="xfc-K9-s5v" secondAttribute="top" constant="84" id="ada-Hs-cXh"/>
-                            <constraint firstAttribute="bottom" secondItem="Hs5-Fd-Yee" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="alE-x5-wZR"/>
                             <constraint firstAttribute="trailing" secondItem="f0j-dA-1pz" secondAttribute="trailing" constant="93" id="dld-Vs-XII"/>
                             <constraint firstItem="Hs5-Fd-Yee" firstAttribute="leading" secondItem="xfc-K9-s5v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="em1-Qo-Vbf"/>
                             <constraint firstAttribute="trailing" secondItem="daB-wf-paL" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mpc-jK-qqv"/>
@@ -235,255 +237,6 @@
             </objects>
             <point key="canvasLocation" x="480" y="74"/>
         </scene>
-        <!--Beat Counter View Controller-->
-        <scene sceneID="yCA-sM-VEy">
-            <objects>
-                <viewController restorationIdentifier="beat_counter" storyboardIdentifier="beat_counter" id="jqG-GI-Q3x" customClass="BeatCounterViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9ne-Bq-2bI">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ5-ej-M3R">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Tap When Ready to Breathe In">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tap_in_out_button:" destination="jqG-GI-Q3x" eventType="touchUpInside" id="XzJ-wZ-9rZ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6M-Z2-wac">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="tX4-1K-6ez"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="64"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFy-Ax-uiM">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="1UC-Y6-d01"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lt4-qw-3Uf">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2VF-7R-gbq"/>
-                                    <constraint firstAttribute="width" constant="97" id="nfw-MP-2w7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ein-eg-u9b">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qcv-3q-VkZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Target breaths/min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC8-f2-fkS">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time for session (min)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIw-RH-kOi">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLA-W4-9XR">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzE-kX-y8k">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tap_settings:" destination="jqG-GI-Q3x" eventType="touchUpInside" id="xVr-Lg-wLZ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dLA-W4-9XR" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="85" id="0eo-cU-qnn"/>
-                            <constraint firstItem="ein-eg-u9b" firstAttribute="top" secondItem="lt4-qw-3Uf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2F4-hu-Kex"/>
-                            <constraint firstItem="tC8-f2-fkS" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="129" id="53G-V6-cnd"/>
-                            <constraint firstAttribute="trailing" secondItem="ein-eg-u9b" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8f5-8v-Nbh"/>
-                            <constraint firstItem="a6M-Z2-wac" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DfN-nj-G4d"/>
-                            <constraint firstItem="JzE-kX-y8k" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="JUi-T3-B52"/>
-                            <constraint firstAttribute="trailing" secondItem="OQ5-ej-M3R" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Lmv-Om-jg6"/>
-                            <constraint firstItem="OQ5-ej-M3R" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WXd-kU-KwG"/>
-                            <constraint firstAttribute="trailing" secondItem="IFy-Ax-uiM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ZKt-2b-tdF"/>
-                            <constraint firstItem="ein-eg-u9b" firstAttribute="leading" secondItem="lt4-qw-3Uf" secondAttribute="leading" type="default" id="bd0-yT-tGM"/>
-                            <constraint firstAttribute="trailing" secondItem="JzE-kX-y8k" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cEE-vk-QlZ"/>
-                            <constraint firstAttribute="trailing" secondItem="a6M-Z2-wac" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cXe-zf-buz"/>
-                            <constraint firstItem="IFy-Ax-uiM" firstAttribute="top" secondItem="ein-eg-u9b" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fT9-9t-m2E"/>
-                            <constraint firstAttribute="trailing" secondItem="lt4-qw-3Uf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gvm-UX-O7S"/>
-                            <constraint firstItem="a6M-Z2-wac" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="20" symbolic="YES" type="default" id="h6f-Ee-Hja"/>
-                            <constraint firstItem="OQ5-ej-M3R" firstAttribute="top" secondItem="IFy-Ax-uiM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hFt-Ja-hYZ"/>
-                            <constraint firstAttribute="bottom" secondItem="OQ5-ej-M3R" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="jAR-3w-dXI"/>
-                            <constraint firstItem="tC8-f2-fkS" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l0q-U4-1yU"/>
-                            <constraint firstItem="IFy-Ax-uiM" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rbO-BL-OiM"/>
-                            <constraint firstItem="dLA-W4-9XR" firstAttribute="centerX" secondItem="a6M-Z2-wac" secondAttribute="centerX" type="default" id="uFM-aR-Nqe"/>
-                            <constraint firstItem="eIw-RH-kOi" firstAttribute="leading" secondItem="9ne-Bq-2bI" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wMJ-Sz-NXx"/>
-                            <constraint firstItem="lt4-qw-3Uf" firstAttribute="top" secondItem="9ne-Bq-2bI" secondAttribute="top" constant="125" id="xTn-Qb-ZpX"/>
-                            <constraint firstItem="eIw-RH-kOi" firstAttribute="baseline" secondItem="ein-eg-u9b" secondAttribute="baseline" type="default" id="yWl-iW-7GS"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="in_out_button" destination="OQ5-ej-M3R" id="2k2-YC-ynE"/>
-                        <outlet property="progress_display" destination="dLA-W4-9XR" id="azU-kn-WQ4"/>
-                        <outlet property="reset" destination="IFy-Ax-uiM" id="g13-ZB-jZt"/>
-                        <outlet property="target" destination="lt4-qw-3Uf" id="QGf-P2-pld"/>
-                        <outlet property="time_to_run" destination="ein-eg-u9b" id="s0g-Ja-3j0"/>
-                        <outlet property="timer" destination="a6M-Z2-wac" id="LH5-yL-2Ie"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="twr-zf-L2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="130" y="121"/>
-        </scene>
-        <!--Beat Counter View Controller-->
-        <scene sceneID="x6t-o7-Vs4">
-            <objects>
-                <viewController restorationIdentifier="beat_counter" storyboardIdentifier="beat_counter" id="VIz-mu-Yhb" customClass="BeatCounterViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cLd-hP-tDA">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFw-uo-FBl">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="188" id="P8D-0K-X8n"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Tap When Ready to Breathe In">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tap_in_out_button:" destination="VIz-mu-Yhb" eventType="touchUpInside" id="0xK-dQ-KqG"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjI-2k-a5F">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Ueg-9o-awj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="64"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DkI-a2-Nrx">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tap_reset:" destination="VIz-mu-Yhb" eventType="touchUpInside" id="tm3-dW-yrz"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6.5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ube-WM-lMB">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="OpL-Ru-Jrg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cIM-7r-0Gg">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Target breaths/min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0n-7m-zL6">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time for session (min)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hK-9I-2m5">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXH-YC-VvS">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C96-XX-ufR">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tap_settings:" destination="VIz-mu-Yhb" eventType="touchUpInside" id="ZFJ-fQ-CKu"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1hK-9I-2m5" firstAttribute="leading" secondItem="cLd-hP-tDA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="0n0-aD-0PQ"/>
-                            <constraint firstItem="G0n-7m-zL6" firstAttribute="leading" secondItem="cLd-hP-tDA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4sc-7Q-zY7"/>
-                            <constraint firstItem="cIM-7r-0Gg" firstAttribute="top" secondItem="ube-WM-lMB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7ez-YM-PQp"/>
-                            <constraint firstItem="G0n-7m-zL6" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="129" id="8gW-Wf-PUS"/>
-                            <constraint firstItem="cjI-2k-a5F" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="BbL-vT-AZQ"/>
-                            <constraint firstItem="C96-XX-ufR" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="G6U-CR-DPx"/>
-                            <constraint firstAttribute="trailing" secondItem="EFw-uo-FBl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JbM-id-Idf"/>
-                            <constraint firstAttribute="trailing" secondItem="cjI-2k-a5F" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QPM-eA-leR"/>
-                            <constraint firstItem="EFw-uo-FBl" firstAttribute="leading" secondItem="cLd-hP-tDA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RjI-TD-oIh"/>
-                            <constraint firstAttribute="trailing" secondItem="cIM-7r-0Gg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="U6Z-Ir-aVm"/>
-                            <constraint firstItem="eXH-YC-VvS" firstAttribute="top" secondItem="cLd-hP-tDA" secondAttribute="top" constant="85" id="VaF-3Z-rJx"/>
-                            <constraint firstItem="eXH-YC-VvS" firstAttribute="centerX" secondItem="cjI-2k-a5F" secondAttribute="centerX" type="default" id="Vpr-bW-XnI"/>
-                            <constraint firstItem="1hK-9I-2m5" firstAttribute="baseline" secondItem="cIM-7r-0Gg" secondAttribute="baseline" type="default" id="XS2-M2-Pym"/>
-                            <constraint firstAttribute="trailing" secondItem="C96-XX-ufR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="abx-Hw-lNN"/>
-                            <constraint firstAttribute="bottom" secondItem="EFw-uo-FBl" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aw7-q1-lnq"/>
-                            <constraint firstItem="DkI-a2-Nrx" firstAttribute="top" secondItem="cIM-7r-0Gg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bTU-Wc-kFk"/>
-                            <constraint firstAttribute="trailing" secondItem="DkI-a2-Nrx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dct-cI-Vlm"/>
-                            <constraint firstItem="cIM-7r-0Gg" firstAttribute="leading" secondItem="ube-WM-lMB" secondAttribute="leading" type="default" id="eiy-tK-EOy"/>
-                            <constraint firstItem="cjI-2k-a5F" firstAttribute="leading" secondItem="cLd-hP-tDA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iTn-Hp-gLg"/>
-                            <constraint firstItem="DkI-a2-Nrx" firstAttribute="leading" secondItem="cLd-hP-tDA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="s9Y-Av-a02"/>
-                            <constraint firstAttribute="trailing" secondItem="ube-WM-lMB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vke-Dk-tYm"/>
-                            <constraint firstItem="EFw-uo-FBl" firstAttribute="top" secondItem="DkI-a2-Nrx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wrr-oR-u3M"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="in_out_button" destination="EFw-uo-FBl" id="ZBs-Iw-5Ze"/>
-                        <outlet property="progress_display" destination="eXH-YC-VvS" id="QsT-c3-S3Z"/>
-                        <outlet property="target" destination="ube-WM-lMB" id="qgI-sZ-wn7"/>
-                        <outlet property="time_to_run" destination="cIM-7r-0Gg" id="2Z8-Ah-tYX"/>
-                        <outlet property="timer" destination="cjI-2k-a5F" id="8kT-Ed-BaJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KyD-r2-N1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="130" y="121"/>
-        </scene>
     </scenes>
     <classes>
         <class className="BeatCounterViewController" superclassName="UIViewController">
@@ -499,6 +252,7 @@
                 <relationship kind="action" name="tap_in_out_button:"/>
                 <relationship kind="action" name="tap_reset:"/>
                 <relationship kind="action" name="tap_settings:"/>
+                <relationship kind="action" name="textFieldDidEndEditing:"/>
                 <relationship kind="action" name="toggle_breathing_state"/>
                 <relationship kind="action" name="update_status_text"/>
                 <relationship kind="action" name="viewDidLoad"/>
@@ -566,6 +320,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

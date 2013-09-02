@@ -160,6 +160,7 @@ class BeatCounterViewController < UIViewController
     @timer_vc.binaural_sound = @binaural_sound
     @timer_vc.tone_volume = @tone_volume
     @timer_vc.ending_sound = @ending_sound
+    @timer_vc.ending_sound_volume = @ending_sound_volume
     UIView.beginAnimations(nil, context:nil)
     UIView.setAnimationDuration(0.0)
     UIView.setAnimationTransition(UIViewAnimationTransitionFlipFromRight,

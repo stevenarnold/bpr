@@ -31,7 +31,7 @@ module SoundHelper
   end
 
   def play_ending_sound
-    @ending_sound.volume = 0.50
+    @ending_sound.volume = @ending_sound_volume
     play(@ending_sound)
   end
 
@@ -72,19 +72,20 @@ module SoundHelper
     @binaural_volume = @defaults.floatForKey('binauralVolume') * (1.0 / 100.0)
     puts "id 04"
     @ambient_volume = @defaults.floatForKey('ambientVolume') * (1.0 / 100.0)
+    @ending_sound_volume = @defaults.floatForKey('endingSoundVolume') * (1.0 / 100.0)
     puts "id 05"
     @ambient_program = @defaults.objectForKey('ambientProgram')
     puts "id 06"
     if @delegate.is_first_run?
-    # if @tone_volume == 0 && @binaural_volume == 0 && @ambient_volume == 0
       puts "id 07"
-      @tone_volume = @binaural_volume = @ambient_volume = 0.50
+      @tone_volume = @binaural_volume = @ambient_volume = @ending_sound_volume = 0.50
       puts "id 09"
       @defaults.setFloat(50.0, forKey: 'binauralVolume')
       puts "id 10"
       @defaults.setFloat(50.0, forKey: 'ambientVolume')
       puts "id 11"
       @defaults.setFloat(50.0, forKey: 'toneVolume')
+      @defaults.setFloat(50.0, forKey: 'endingSoundVolume')
     end
     puts "id 13"
     @ambient_program = "rain.mp3" unless valid_program?(@ambient_program)
@@ -116,8 +117,9 @@ module SoundHelper
     @out_sound.volume = @tone_volume
     puts "is 06"
     if !@program_ending
-      @ending_sound = get_sound(@ending_sound, name: "gongs_ending.m4a", repeat: :once, delegate: self)
-      @ending_sound.volume = 0.5
+      puts "is 07"
+      @ending_sound = get_sound(@ending_sound, name: "gongs_ending.m4a", repeat: :once, delegate: nil)
+      @ending_sound.volume = @ending_sound_volume
     end
   end
 end

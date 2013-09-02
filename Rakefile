@@ -28,4 +28,6 @@ Motion::SettingsBundle.setup do |app|
   app.slider "Ambient Volume", key: "ambientVolume", default: 50, min: 1, max: 100
   app.title "Tone Volume", key: "toneVolumeTitle", default: ""
   app.slider "Tone Volume", key: "toneVolume", default: 50, min: 1, max: 100
+  app.title "Ending Sound Volume", key: "endingSoundVolumeTitle", default: ""
+  app.slider "Ending Sound Volume", key: "endingSoundVolume", default: 50, min: 1, max: 100
 end
