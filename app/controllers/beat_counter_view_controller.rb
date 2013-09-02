@@ -188,13 +188,13 @@ class BeatCounterViewController < UIViewController
       @last_beat = Time.now
       puts "@act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}, @in_count = #{@in_count}, interval = #{interval}"
       if was_breathing_in
-        @out_count += 1
-        @act_out_avg = ((@act_out_avg * (@out_count - 1)) + interval) / @out_count
-        play_out_sound
-      else
         @in_count += 1
         @act_in_avg = ((@act_in_avg * (@in_count - 1)) + interval) / @in_count
         play_in_sound
+      else
+        @out_count += 1
+        @act_out_avg = ((@act_out_avg * (@out_count - 1)) + interval) / @out_count
+        play_out_sound
       end
       toggle_breathing_state
     else

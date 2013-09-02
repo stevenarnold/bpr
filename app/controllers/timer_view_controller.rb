@@ -35,47 +35,6 @@
     @actual_bpm_disp.text = "%0.2f" % bpm
     @program_ending = false
 
-    @static_algorithm = lambda do
-      if @act_in_avg + @act_out_avg > @target_bpm
-        @act_in_avg -= 0.5
-        @act_out_avg -= 0.5
-      end
-    end
-    @golden_ratio_algorithm = lambda do
-      # Golden ratio is 1:1.6.  We want the longer period to be the out breath.
-      # Even if the overall BPM is approximately at target, we want to shift
-      # in and out breaths to reach the golden ratio.
-      puts "entering decayer: @act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}"
-      out_factor = 1
-      in_factor = 1
-      @breathing_ratio = @act_out_avg / @act_in_avg
-      if bpm_is_high
-        if ratio_too_high # out breath needs to reduce rel to in
-          @act_out_avg *= 0.95
-        elsif ratio_too_low
-          @act_in_avg *= 0.95
-        end
-      elsif bpm_is_low
-        if ratio_too_high # out breath needs to increase rel to in
-          @act_out_avg *= 1.05
-        elsif ratio_too_low
-          @act_in_avg *= 1.05
-        end
-      else
-        if ratio_too_high
-          change_for_out = @act_out_avg * 1.05
-          @act_out_avg -= change_for_out
-          @act_in_avg += change_for_out
-        elsif ratio_too_low
-          change_for_in = @act_in_avg * 1.05
-          @act_in_avg -= change_for_in
-          @act_out_avg += change_for_in
-        end
-      end
-      puts "leaving decayer: @act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}"
-    end
-    @decay_algorithm = @golden_ratio_algorithm
-
     start_sound_if_selected(:ambient)
     start_sound_if_selected(:binaural)
     start_timer
