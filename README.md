@@ -17,9 +17,16 @@ prompt> rvm gemset create bpr
 prompt> rvm use <my-installed-ruby>@bpr
 prompt> bundle
 
-Then, to run the app in the simulator:
+Next, if you wish to deploy to a device, you will have to change the
+Rakefile provisioning_profile setting to something valid on your system.
+
+To run the app in the simulator:
 
 prompt> rake
+
+Or in the device:
+
+prompt> rake device
 
 CONTRIBUTIONS & CODE QUALITY
 ============================
