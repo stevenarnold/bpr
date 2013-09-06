@@ -10,7 +10,16 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>0C41B581066F493BAE718759</key>
+		<key>02FF1F3DA31B4F018B3F281A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D13CFD64613E4FFE8744E077</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>098E762632DE4383B5F2EC3C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -19,311 +28,65 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>IASKTextField.h</string>
+			<string>IASKSwitch.h</string>
 			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKTextField.h</string>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSwitch.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>10320CB9E8F44C7AAF7C8129</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>E02F91461249431A93C84E03</string>
-			<key>buildPhases</key>
-			<array>
-				<string>144B3E2875984F2CB308E4EA</string>
-				<string>55B5A13E83B548CC9A8D4BA4</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ib</string>
-			<key>productName</key>
-			<string>ib</string>
-			<key>productReference</key>
-			<string>9D5DE55A3F7A4CB29CC969A8</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>13B4A885D290412DBD85598D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKSettingsStore.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSettingsStore.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>144B3E2875984F2CB308E4EA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C99BB69D40F142768BE88F9C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1F796E11BCA144938024BD83</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>QuartzCore.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>2100628C9CB0452CA9569337</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKAppSettingsWebViewController.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKAppSettingsWebViewController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>24A61AA6BEAC4A898BEB2F41</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Icon@2x.png</string>
-			<key>path</key>
-			<string>resources/Icon@2x.png</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2CCAD706A3194E57A35E110D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>en.lproj</string>
-			<key>path</key>
-			<string>resources/Settings.bundle/en.lproj</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2D2EAA5447444F61B128FE67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKPSSliderSpecifierViewCell.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKPSSliderSpecifierViewCell.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>452FBCC416AF471482B6656C</key>
+		<key>09EF152A07C24251A5246841</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>B1AB0CB317014A3B85B433EC</string>
-				<string>6FC0A101F9DF4770A47F020D</string>
-				<string>A5236EBA55F9429B9B1070CD</string>
-				<string>2100628C9CB0452CA9569337</string>
-				<string>2D2EAA5447444F61B128FE67</string>
-				<string>B12F3503CB6D476EB849AB02</string>
-				<string>DB331FFE55E34DFB8AB256F6</string>
-				<string>D3E57E96E82F48C383D5C93F</string>
-				<string>13B4A885D290412DBD85598D</string>
-				<string>6F17A41E198A4A7C98779FE7</string>
-				<string>5F13B715BA47458D91930DA0</string>
-				<string>78E127A0F98F4863B81A9F13</string>
-				<string>4BC2F2A8A7464EE48AB846C0</string>
-				<string>4D9A7358A7F54484AD706AC0</string>
-				<string>EFC5F2E0432A4AAEAB5F4251</string>
-				<string>0C41B581066F493BAE718759</string>
-				<string>CBBE65D6C5C5435D87702B86</string>
+				<string>84B45D228A1B400F9206EDE8</string>
+				<string>0F2A2824F9044B7193C9612C</string>
+				<string>4689A336F4624A088A18D3CC</string>
+				<string>441DE1B96A824E288596C4A7</string>
+				<string>5158B59DCA98404CAD90C8D9</string>
+				<string>845A58C373804E1A91194F56</string>
+				<string>F1E9F62A839540A4B762823E</string>
+				<string>73C38279EDF34B0698938935</string>
+				<string>4B2369F2EB9F422FB29AEC11</string>
+				<string>84DBCC83E98C4E488E90CFC8</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Pods</string>
+			<string>Resources</string>
 			<key>path</key>
-			<string>vendor/Pods/Headers</string>
+			<string>resources</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4710AC74D7B847F887AF464E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>iTunesArtwork@2x.png</string>
-			<key>path</key>
-			<string>resources/iTunesArtwork@2x.png</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4BC2F2A8A7464EE48AB846C0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKSpecifier.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSpecifier.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4C0B28ADC9334C659A36FE2F</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0450</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>DFD37ADAD1C64090A3EBD353</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>E0C39C617ECC4B2BAF025BDD</string>
-			<key>productRefGroup</key>
-			<string>582D0F67E0FB450FB723B99C</string>
-			<key>projectReferences</key>
-			<array/>
-			<key>targets</key>
-			<array>
-				<string>10320CB9E8F44C7AAF7C8129</string>
-			</array>
-		</dict>
-		<key>4D9A7358A7F54484AD706AC0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKSpecifierValuesViewController.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSpecifierValuesViewController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>55B5A13E83B548CC9A8D4BA4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B2603C2CE3E0466F8D44CB78</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>582D0F67E0FB450FB723B99C</key>
+		<key>0EABE5B8D4AD4B79BBBAA89C</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>9D5DE55A3F7A4CB29CC969A8</string>
+				<string>CDCE4A81D0FE452A92608F82</string>
+				<string>9FCCE6E85A834E198EEC5BA2</string>
+				<string>09EF152A07C24251A5246841</string>
+				<string>784E5F9670554F81809D78C5</string>
+				<string>C21FF396C3C5476EA275813A</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5BA191F02DCC4833AEFFADCA</key>
+		<key>0F2A2824F9044B7193C9612C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>CoreData.framework</string>
+			<string>preview.png</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>5F13B715BA47458D91930DA0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKSettingsStoreUserDefaults.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSettingsStoreUserDefaults.h</string>
+			<string>resources/help_icon.artx/Preview/preview.png</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6AA3F2A23E8140A2A83680DB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Storyboard.storyboard</string>
-			<key>path</key>
-			<string>resources/Storyboard.storyboard</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>6F17A41E198A4A7C98779FE7</key>
+		<key>345DCAD5C8F54EDFA3619B45</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -338,7 +101,171 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>6FC0A101F9DF4770A47F020D</key>
+		<key>35CE70F8783B4120BD8B7E79</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>3D4033123BFC474092CE4418</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKPSSliderSpecifierViewCell.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKPSSliderSpecifierViewCell.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>3E2001CDFA714D808DB28A6F</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D8E87F193F914DA88D0BF2B5</string>
+			<key>buildPhases</key>
+			<array>
+				<string>80A7BE6132DC49E1A8849238</string>
+				<string>4B7CCFEEB972421DA1FC8B4C</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>ib</string>
+			<key>productName</key>
+			<string>ib</string>
+			<key>productReference</key>
+			<string>D9C69E50A42246D892556905</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>43C6EC587E5E485184E8A289</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>____Pods-environment.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/____Pods-environment.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>441DE1B96A824E288596C4A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Icon-72.png</string>
+			<key>path</key>
+			<string>resources/Icon-72.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4689A336F4624A088A18D3CC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>help_icon.png</string>
+			<key>path</key>
+			<string>resources/help_icon.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4B2369F2EB9F422FB29AEC11</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Storyboard.storyboard</string>
+			<key>path</key>
+			<string>resources/Storyboard.storyboard</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4B7CCFEEB972421DA1FC8B4C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6E434B18BDFA4259A3683651</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5158B59DCA98404CAD90C8D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>icon.png</string>
+			<key>path</key>
+			<string>resources/icon.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5197E94377FD46D5A3CEFCB5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKSettingsStore.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSettingsStore.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>51F517BEA5E84DD3957123BA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKSpecifier.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSpecifier.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>53F1285E678947BDAD6329BF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -353,20 +280,75 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>725E6E183B044433A782BCB1</key>
+		<key>54C2AA28E31A4CF795796D67</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Stubs.h</string>
+			<key>path</key>
+			<string>ib.xcodeproj/Stubs.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>655AA383B3634F4D8E35FCB0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>6E434B18BDFA4259A3683651</key>
+		<dict>
+			<key>fileRef</key>
+			<string>924ADAE4F1B8481D9D1E60BE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>73C38279EDF34B0698938935</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>iTunesArtwork.png</string>
+			<string>iTunesArtwork@2x.png</string>
 			<key>path</key>
-			<string>resources/iTunesArtwork.png</string>
+			<string>resources/iTunesArtwork@2x.png</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>78E127A0F98F4863B81A9F13</key>
+		<key>784E5F9670554F81809D78C5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>54C2AA28E31A4CF795796D67</string>
+				<string>D13CFD64613E4FFE8744E077</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>path</key>
+			<string>ib.xcodeproj</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A08CED279D4BCD8BF42CBF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -381,29 +363,250 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>7B1117C9290A4EE5BF99AD4F</key>
+		<key>7CC30667BC93477983818E2C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict/>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>7F05C90390B24708848A085E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0450</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>AE7347619FCC4F94B4FF89BD</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>0EABE5B8D4AD4B79BBBAA89C</string>
+			<key>productRefGroup</key>
+			<string>CDCE4A81D0FE452A92608F82</string>
+			<key>projectReferences</key>
+			<array/>
+			<key>targets</key>
+			<array>
+				<string>3E2001CDFA714D808DB28A6F</string>
+			</array>
+		</dict>
+		<key>80A7BE6132DC49E1A8849238</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>02FF1F3DA31B4F018B3F281A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>834B5566B92048CBBC665D50</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKSpecifierValuesViewController.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSpecifierValuesViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>845A58C373804E1A91194F56</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Icon@2x.png</string>
+			<key>path</key>
+			<string>resources/Icon@2x.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>84B45D228A1B400F9206EDE8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Default-568h@2x.png</string>
+			<key>path</key>
+			<string>resources/Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>84DBCC83E98C4E488E90CFC8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>en.lproj</string>
+			<key>path</key>
+			<string>resources/Settings.bundle/en.lproj</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>87788896CF89476DBF3C82FA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKViewController.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>924ADAE4F1B8481D9D1E60BE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>93D9270AFCFB488CAA73E77D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKSettingsStoreUserDefaults.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSettingsStoreUserDefaults.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>989F9C8058C64962805097EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKSettingsReader.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSettingsReader.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9FCCE6E85A834E198EEC5BA2</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>B14FEDB8BC1044FD98BFEB98</string>
-				<string>CA8039AD378040578EBCA5AC</string>
-				<string>9917C1F9B06540DF98770090</string>
-				<string>24A61AA6BEAC4A898BEB2F41</string>
-				<string>725E6E183B044433A782BCB1</string>
-				<string>4710AC74D7B847F887AF464E</string>
-				<string>6AA3F2A23E8140A2A83680DB</string>
-				<string>2CCAD706A3194E57A35E110D</string>
+				<string>924ADAE4F1B8481D9D1E60BE</string>
+				<string>655AA383B3634F4D8E35FCB0</string>
+				<string>DAD099753F2C45C585480B98</string>
+				<string>35CE70F8783B4120BD8B7E79</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Resources</string>
-			<key>path</key>
-			<string>resources</string>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7CF7971BDBCD4F6AAB6949E2</key>
+		<key>A3E6CA81EEF448D48E951A2E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKAppSettingsWebViewController.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKAppSettingsWebViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A8C45FE37EF94ACA82A8BF86</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKTextField.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKTextField.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>ADF0E67D67374BC58624F6CC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>IASKAppSettingsViewController.h</string>
+			<key>path</key>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKAppSettingsViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AE7347619FCC4F94B4FF89BD</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>BE8A43DF056D465C953C4628</string>
+				<string>7CC30667BC93477983818E2C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B804E5480E5C43ADAF652BF5</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -453,118 +656,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>7F64317C8527462A9D07AD9C</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict/>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8322DDAA486947B7ACBB1CD1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>9917C1F9B06540DF98770090</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>icon.png</string>
-			<key>path</key>
-			<string>resources/icon.png</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9D5DE55A3F7A4CB29CC969A8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libib.a</string>
-			<key>path</key>
-			<string>libib.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9EBC33DFD3D644A1A4CB792E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E2CABDD61D19499A9C9D9BD5</string>
-				<string>CB797BFFA4CF454492DA559A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>path</key>
-			<string>ib.xcodeproj</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A5236EBA55F9429B9B1070CD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKAppSettingsViewController.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKAppSettingsViewController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B12F3503CB6D476EB849AB02</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKPSTextFieldSpecifierViewCell.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKPSTextFieldSpecifierViewCell.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B14FEDB8BC1044FD98BFEB98</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Default-568h@2x.png</string>
-			<key>path</key>
-			<string>resources/Default-568h@2x.png</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B16500F56B3B49AE88F1F984</key>
+		<key>BE8A43DF056D465C953C4628</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict/>
@@ -573,53 +665,51 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>B1AB0CB317014A3B85B433EC</key>
+		<key>C21FF396C3C5476EA275813A</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>43C6EC587E5E485184E8A289</string>
+				<string>53F1285E678947BDAD6329BF</string>
+				<string>ADF0E67D67374BC58624F6CC</string>
+				<string>A3E6CA81EEF448D48E951A2E</string>
+				<string>3D4033123BFC474092CE4418</string>
+				<string>D1AB4BCE9D1B46148C1DEE06</string>
+				<string>D95CE6F705D2443ABEDE90E3</string>
+				<string>989F9C8058C64962805097EA</string>
+				<string>5197E94377FD46D5A3CEFCB5</string>
+				<string>345DCAD5C8F54EDFA3619B45</string>
+				<string>93D9270AFCFB488CAA73E77D</string>
+				<string>79A08CED279D4BCD8BF42CBF</string>
+				<string>51F517BEA5E84DD3957123BA</string>
+				<string>834B5566B92048CBBC665D50</string>
+				<string>098E762632DE4383B5F2EC3C</string>
+				<string>A8C45FE37EF94ACA82A8BF86</string>
+				<string>87788896CF89476DBF3C82FA</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>____Pods-environment.h</string>
+			<string>Pods</string>
 			<key>path</key>
-			<string>vendor/Pods/Headers/____Pods-environment.h</string>
+			<string>vendor/Pods/Headers</string>
 			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B2603C2CE3E0466F8D44CB78</key>
+		<key>CDCE4A81D0FE452A92608F82</key>
 		<dict>
-			<key>fileRef</key>
-			<string>D75BA02333864C48A4F558B5</string>
+			<key>children</key>
+			<array>
+				<string>D9C69E50A42246D892556905</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict/>
-		</dict>
-		<key>C99BB69D40F142768BE88F9C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CB797BFFA4CF454492DA559A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict/>
-		</dict>
-		<key>CA8039AD378040578EBCA5AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Icon-72.png</string>
-			<key>path</key>
-			<string>resources/Icon-72.png</string>
+			<string>Products</string>
 			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CB797BFFA4CF454492DA559A</key>
+		<key>D13CFD64613E4FFE8744E077</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -634,7 +724,7 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>CBBE65D6C5C5435D87702B86</key>
+		<key>D1AB4BCE9D1B46148C1DEE06</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -643,59 +733,27 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>IASKViewController.h</string>
+			<string>IASKPSTextFieldSpecifierViewCell.h</string>
 			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKViewController.h</string>
+			<string>vendor/Pods/Headers/InAppSettingsKit/IASKPSTextFieldSpecifierViewCell.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>D3E57E96E82F48C383D5C93F</key>
+		<key>D8E87F193F914DA88D0BF2B5</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKSettingsReader.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSettingsReader.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D75BA02333864C48A4F558B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>D82EF4D92482443E84A5C4D8</key>
-		<dict>
-			<key>children</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>D75BA02333864C48A4F558B5</string>
-				<string>1F796E11BCA144938024BD83</string>
-				<string>8322DDAA486947B7ACBB1CD1</string>
-				<string>5BA191F02DCC4833AEFFADCA</string>
+				<string>B804E5480E5C43ADAF652BF5</string>
+				<string>F90865B300AA4562AB273281</string>
 			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>DB331FFE55E34DFB8AB256F6</key>
+		<key>D95CE6F705D2443ABEDE90E3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -710,7 +768,50 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>DCB28C9F67164FAC98BD6F3E</key>
+		<key>D9C69E50A42246D892556905</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libib.a</string>
+			<key>path</key>
+			<string>libib.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DAD099753F2C45C585480B98</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F1E9F62A839540A4B762823E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>iTunesArtwork.png</string>
+			<key>path</key>
+			<string>resources/iTunesArtwork.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F90865B300AA4562AB273281</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -759,81 +860,8 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>DFD37ADAD1C64090A3EBD353</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B16500F56B3B49AE88F1F984</string>
-				<string>7F64317C8527462A9D07AD9C</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E02F91461249431A93C84E03</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7CF7971BDBCD4F6AAB6949E2</string>
-				<string>DCB28C9F67164FAC98BD6F3E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>E0C39C617ECC4B2BAF025BDD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>582D0F67E0FB450FB723B99C</string>
-				<string>D82EF4D92482443E84A5C4D8</string>
-				<string>7B1117C9290A4EE5BF99AD4F</string>
-				<string>9EBC33DFD3D644A1A4CB792E</string>
-				<string>452FBCC416AF471482B6656C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E2CABDD61D19499A9C9D9BD5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Stubs.h</string>
-			<key>path</key>
-			<string>ib.xcodeproj/Stubs.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>EFC5F2E0432A4AAEAB5F4251</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IASKSwitch.h</string>
-			<key>path</key>
-			<string>vendor/Pods/Headers/InAppSettingsKit/IASKSwitch.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>4C0B28ADC9334C659A36FE2F</string>
+	<string>7F05C90390B24708848A085E</string>
 </dict>
 </plist>

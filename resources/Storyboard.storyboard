@@ -60,6 +60,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CIk-js-Y0s">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IAD-Ww-qbJ" id="RqH-4L-ea7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Target breaths/min" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqL-fS-C24">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -89,6 +92,23 @@
                                     <action selector="tap_settings:" destination="IAD-Ww-qbJ" eventType="touchUpInside" id="XBS-ka-ZNV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByO-TV-Edg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="C0l-eW-mKH"/>
+                                    <constraint firstAttribute="height" constant="24" id="kny-bz-2KJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="help_icon.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tap_help:" destination="IAD-Ww-qbJ" eventType="touchUpInside" id="kbE-9e-4Ld"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.729411780834198" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -97,10 +117,12 @@
                             <constraint firstItem="Z0a-T6-d4W" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="85" id="4s8-xB-zpC"/>
                             <constraint firstItem="AN4-MK-vb7" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5DT-5f-YpT"/>
                             <constraint firstItem="CIk-js-Y0s" firstAttribute="top" secondItem="1pu-lr-XkW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6hC-Xg-3jH"/>
+                            <constraint firstItem="ByO-TV-Edg" firstAttribute="centerY" secondItem="yIO-XA-yWd" secondAttribute="centerY" type="default" id="8wg-vz-hYW"/>
                             <constraint firstAttribute="trailing" secondItem="PfX-7x-HNs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="EV8-XV-GYu"/>
                             <constraint firstAttribute="bottom" secondItem="wko-q2-nnd" secondAttribute="bottom" constant="20" symbolic="YES" type="user" id="Ehc-Qg-av2"/>
                             <constraint firstItem="BVm-24-Sfa" firstAttribute="baseline" secondItem="CIk-js-Y0s" secondAttribute="baseline" type="default" id="FA4-Ux-MnL"/>
                             <constraint firstItem="BqL-fS-C24" firstAttribute="top" secondItem="KAL-B4-rfi" secondAttribute="top" constant="129" id="Ldb-yR-B4h"/>
+                            <constraint firstItem="ByO-TV-Edg" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PGn-vo-Lqo"/>
                             <constraint firstItem="wko-q2-nnd" firstAttribute="leading" secondItem="KAL-B4-rfi" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PIR-h0-jYc"/>
                             <constraint firstItem="Z0a-T6-d4W" firstAttribute="centerX" secondItem="AN4-MK-vb7" secondAttribute="centerX" type="default" id="Raq-Cs-Dox"/>
                             <constraint firstItem="wko-q2-nnd" firstAttribute="top" secondItem="PfX-7x-HNs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SkA-bw-ZTn"/>
@@ -237,7 +259,80 @@
             </objects>
             <point key="canvasLocation" x="480" y="74"/>
         </scene>
+        <!--Help View Controller-->
+        <scene sceneID="kYP-Fl-Rbr">
+            <objects>
+                <viewController storyboardIdentifier="help" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jrv-UG-n5c" customClass="HelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4cD-PO-xx1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-nK-Qdb">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <string key="text">WHAT IS BLOOD PRESSURE REDUCER?
+
+Blood Pressure Reducer is an app that allows you to relax and reduce your blood pressure through a simple, proven technique to slow your breathing.  Although clinical studies in journals such as The American Journal of Hypertension and the American Heart Association Hypertension Primer show this method's effectiveness, the best proof is to measure your blood pressure yourself, use Blood Pressure Reducer, and measure it again.
+
+It makes a big difference, and the closest competing product costs $300 or more.  Blood Pressure Reducer is one of the best apps on the iTunes App Store to simply and profoundly relax, in at little as 10 or 15 minutes.  Try it daily for two weeks, and see if you notice a difference in your level of relaxation all through the day.
+
+HOW DOES THE APP WORK?
+
+Blood Pressure Reducer reduces your blood pressure by measuring your current rate of breathing, and, through in and out tones, gradually slowing down your breathing to a therapeutic level.  In as little as 10 minutes, your systolic blood pressure can drop as many as 10-20 points, without medication.
+
+To use Blood Pressure Reducer, simply tap the button on the main screen each time you breathe in or out, for the first 10 breaths.  The program will capture your rate of breathing.  Then breathe in and out with the tones as your breathing rate is slowly decreased.  If you get out of sync with the tones, next time you breathe in or out you can tap the main button with your in and out breaths, as much as you like, to reset the timing.
+
+It's important to breathe as naturally as you can when setting the initial pace.  Don't force yourself.  Just relax, and tap the button each time you breathe in or out.  You'll get the hang of it quickly, and after a few tries it will be completely natural.
+
+The new and updated preferences panel allows you to set the volume for each component of the program, including the in-out tone volume, the ambient sound volume, the binaural volume, and the volume for the session-ending sound.  To turn off any of these sounds completely, simply set the volume to zero.  For ambient sounds, you can choose from rain, the ocean, or a forest sound.
+
+The app will also remember the running time you select and your target breaths per minute, so you don't need to reset these each time.
+
+HOW MANY BREATHS PER MINUTE SHOULD I TARGET?
+
+This is an individual choice.  A good default is 6.5 breaths per minute.  Most of us are breathing at 10-12 breaths per minute normally (when we're not relaxing).
+
+However, for some people, that rate is too slow, and hard to follow.  In that case, don't feel bad about increasing it to something you're comfortable with.  Also, some people can get down to really low numbers, and if that works for you, go ahead and change the default.
+
+HOW LONG SHOULD I USE THE PROGRAM?
+
+The maximum run time is 30 minutes.  Any time less than this is fine.  You'll feel a definite improvement in only 5 minutes, but we would recommend 10 or 15 minutes daily, either at the beginning or ending of the day, depending on when you feel more stressed.  It's better to do 10 minutes a day, every day, than to do 30 minutes for a few days and then quit completely because that's too much of a demand on your time.  So, we recommend picking a program length that you can live with consistently, every day.
+
+WHAT IF I NEED HELP?
+
+If you have any questions, write to us at support@arnold-software.com.  Try to be as detailed as you can about the problem.  The more information you give us, the more effectively we can help you.
+
+If you'd like to see a new feature in BPR, let us know at the support email as well.  We're happy to hear good ideas and put them in the app.
+
+Finally, thanks for being a customer!  We truly hope you enjoy Blood Pressure Reducer.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U3B-nK-Qdb" firstAttribute="bottom" secondItem="4cD-PO-xx1" secondAttribute="bottom" type="default" id="9Qj-oS-dIc"/>
+                            <constraint firstItem="U3B-nK-Qdb" firstAttribute="leading" secondItem="4cD-PO-xx1" secondAttribute="leading" type="default" id="b8D-8D-YcK"/>
+                            <constraint firstItem="U3B-nK-Qdb" firstAttribute="trailing" secondItem="4cD-PO-xx1" secondAttribute="trailing" type="default" id="tAE-NL-CWc"/>
+                            <constraint firstItem="U3B-nK-Qdb" firstAttribute="top" secondItem="4cD-PO-xx1" secondAttribute="top" type="default" id="zNW-vx-MBr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="help_text" destination="U3B-nK-Qdb" id="MdP-Zq-Sln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wmo-98-ka4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="166"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="help_icon.png" width="45" height="45"/>
+    </resources>
     <classes>
         <class className="BeatCounterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BeatCounterViewController.h"/>
@@ -249,6 +344,7 @@
                 <relationship kind="action" name="start_timer"/>
                 <relationship kind="action" name="still_collecting_initial_data"/>
                 <relationship kind="action" name="supportedInterfaceOrientations"/>
+                <relationship kind="action" name="tap_help:"/>
                 <relationship kind="action" name="tap_in_out_button:"/>
                 <relationship kind="action" name="tap_reset:"/>
                 <relationship kind="action" name="tap_settings:"/>
@@ -264,6 +360,17 @@
                 <relationship kind="outlet" name="time_to_run" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="timer" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="HelpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneWithHelp:"/>
+                <relationship kind="action" name="viewDidLoad"/>
+                <relationship kind="outlet" name="help_text" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="TimerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimerViewController.h"/>

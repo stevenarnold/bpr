@@ -77,15 +77,14 @@ module SoundHelper
     @ambient_program = @defaults.objectForKey('ambientProgram')
     puts "id 06"
     if @delegate.is_first_run?
-      puts "id 07"
-      @tone_volume = @binaural_volume = @ambient_volume = @ending_sound_volume = 0.50
-      puts "id 09"
-      @defaults.setFloat(50.0, forKey: 'binauralVolume')
-      puts "id 10"
+      @binaural_volume = 0.20
+      @defaults.setFloat(20.0, forKey: 'binauralVolume')
+      @ambient_volume = 0.50
       @defaults.setFloat(50.0, forKey: 'ambientVolume')
-      puts "id 11"
-      @defaults.setFloat(50.0, forKey: 'toneVolume')
-      @defaults.setFloat(50.0, forKey: 'endingSoundVolume')
+      @tone_volume = 0.80
+      @defaults.setFloat(80.0, forKey: 'toneVolume')
+      @ending_sound_volume = 0.40
+      @defaults.setFloat(40.0, forKey: 'endingSoundVolume')
     end
     puts "id 13"
     @ambient_program = "rain.mp3" unless valid_program?(@ambient_program)

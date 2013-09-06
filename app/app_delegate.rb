@@ -4,15 +4,22 @@ class AppDelegate
 
   outlet :window, UIWindow
   attr_accessor :sb, :settings, :ambient, :binaural, :navigationController,
-                :bc_controller, :defaults, :system_settings
+                :bc_controller, :defaults, :system_settings, :help_nav,
+                :nav_item, :help_controller
 
   def initialize_sound
-    # sessionCategory = kAudioSessionCategory_MediaPlayback;
-    # AudioSessionSetProperty(
-    #     kAudioSessionProperty_AudioCategory,
-    #     sizeof (sessionCategory),
-    #     &sessionCategory
-    # );
+    category_err = Pointer.new(:id)
+    session_err = Pointer.new(:id)
+    @session = AVAudioSession.sharedInstance
+    success = @session.setActive(true, error: session_err)
+    if success
+      success = @session.setCategory(AVAudioSessionCategoryPlayback, 
+        # withOptions: AVAudioSessionCategoryOptionMixWithOthers,
+        error: category_err)
+      puts "*** Failed to set audio category!" # unless success
+    else
+      puts "*** Failed to activate AVAudioSession!"
+    end
   end
 
   def settingsViewControllerDidEnd(sender)

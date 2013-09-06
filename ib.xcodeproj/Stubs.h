@@ -203,6 +203,7 @@
 -(IBAction) tap_in_out_button:(id) sender;
 -(IBAction) tap_reset:(id) sender;
 -(IBAction) tap_settings:(id) sender;
+-(IBAction) tap_help:(id) sender;
 -(IBAction) initialize_state;
 -(IBAction) viewDidLoad;
 -(IBAction) textFieldDidEndEditing:(id) field;
@@ -215,6 +216,18 @@
 -(IBAction) toggle_breathing_state;
 -(IBAction) update_status_text;
 -(IBAction) start_timer;
+
+@end
+
+
+@interface HelpViewController: UIViewController
+
+@property IBOutlet UITextView * help_text;
+
+
+
+-(IBAction) viewDidLoad;
+-(IBAction) doneWithHelp:(id) sender;
 
 @end
 

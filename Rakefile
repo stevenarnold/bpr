@@ -16,6 +16,8 @@ Motion::Project::App.setup do |app|
   app.pods do
     pod 'InAppSettingsKit'
   end
+  app.info_plist['UIBackgroundModes'] = ['audio']
+  app.provisioning_profile = "/Users/thoth/Library/MobileDevice/Provisioning Profiles/4B484971-E5F8-46D0-BED4-16337A0CF83C.mobileprovision"
 end
 
 Motion::SettingsBundle.setup do |app|

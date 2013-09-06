@@ -73,6 +73,11 @@
 @end
 
 
+@implementation HelpViewController
+
+@end
+
+
 @implementation TimerViewController
 
 @end

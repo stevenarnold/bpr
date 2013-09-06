@@ -12,6 +12,7 @@ class BeatCounterViewController < UIViewController
   ib_action :tap_in_out_button
   ib_action :tap_reset
   ib_action :tap_settings
+  ib_action :tap_help
 
   TIME_TO_RUN_BTN = 0
   BPM_BTN = 1
@@ -60,6 +61,7 @@ class BeatCounterViewController < UIViewController
     @settings.delegate = @delegate
     @settings.showDoneButton = true
     @navigationController = @delegate.navigationController
+    @help_nav = @delegate.help_nav
     @window = UIApplication.sharedApplication.keyWindow
     numberToolbar = UIToolbar.alloc.initWithFrame(CGRectMake(0,0,320,50))
     numberToolbar.barStyle = UIBarStyleBlackTranslucent
@@ -70,7 +72,6 @@ class BeatCounterViewController < UIViewController
                                                                style: UIBarButtonItemStyleDone,
                                                                target: self,
                                                                action: :doneWithNumberPad)]
-    numberToolbar.sizeToFit
     @target.keyboardType = UIKeyboardTypeDecimalPad
     @target.inputAccessoryView = numberToolbar
     @target.delegate = self
@@ -170,6 +171,14 @@ class BeatCounterViewController < UIViewController
     @timer_vc.viewDidLoad
   end
 
+  # Handle program length (currently that's all we handle, so we ignore tags)
+  def textFieldDidEndEditing(field)
+    if field.text.to_f > 30.0
+      field.text = "30"
+      App.alert("Maximum program time is 30 minutes.")
+    end
+  end
+
   def show_view(old_view, new_vc)
     old_view.removeFromSuperview
     @window.addSubview(new_vc.view)
@@ -213,6 +222,24 @@ class BeatCounterViewController < UIViewController
     @view = view
     show_view(view, @navigationController)
     puts "settings 05"
+  end
+
+  def tap_help sender
+    @help_controller = @sb.instantiateViewControllerWithIdentifier("help")
+    puts "@helpController = #{@help_controller}"
+    nav_controller = UINavigationController.alloc.initWithRootViewController(@help_controller)
+    @nav_item = UINavigationItem.alloc.initWithTitle("Help")
+    button_item = UIBarButtonItem.alloc.initWithBarButtonSystemItem(UIBarButtonSystemItemDone, 
+                                          target: @help_controller, 
+                                          action: :done_with_help)
+
+    @help_controller.navigationItem.leftBarButtonItem = button_item
+    @help_controller.beat_vc = self
+    @view = view
+    # [self.navigationController presentModalViewController:self.myModalViewController animated:YES];
+    show_view(view, @help_controller.navigationController)
+    puts "@help_controller.navigationController = #{@help_controller.navigationController}"
+    # @help_controller.navigationController.presentModalViewController(@help_controller, animated: true)
   end
 end
 
