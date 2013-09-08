@@ -11,13 +11,23 @@ require 'motion-cocoapods'
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'Blood Pressure Reducer'
+  app.version = '4.0'
+  app.device_family = [:iphone, :ipad]
+  app.identifier = 'com.arnold-software.BloodPressureReducer'
   app.frameworks += ['AVFoundation']
-  app.icons = ["Icon.png", "Icon-72.png", "Icon@2x.png"]
+  app.icons = ["Icon.png", "Icon@2x.png"]
   app.pods do
     pod 'InAppSettingsKit'
   end
   app.info_plist['UIBackgroundModes'] = ['audio']
-  app.provisioning_profile = "/Users/thoth/Library/MobileDevice/Provisioning Profiles/4B484971-E5F8-46D0-BED4-16337A0CF83C.mobileprovision"
+  app.release do
+    app.provisioning_profile = "/Users/thoth/Library/MobileDevice/Provisioning Profiles/E3CB101B-C4FA-4D1B-94C5-DB3292695215.mobileprovision"
+    app.codesign_certificate = "iPhone Distribution: Arnold Software Associates, Inc"
+  end
+  app.development do
+    app.provisioning_profile = "/Users/thoth/Library/MobileDevice/Provisioning Profiles/4B484971-E5F8-46D0-BED4-16337A0CF83C.mobileprovision"
+    app.codesign_certificate = "iPhone Developer: Steven Arnold (78N87GRK5G)"
+  end
 end
 
 Motion::SettingsBundle.setup do |app|

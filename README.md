@@ -13,20 +13,20 @@ the old-fashioned name => value syntax).
 To compile, first install XCode and RubyMotion.  Then, if you choose to
 use rvm, you can follow these steps:
 
-prompt> rvm gemset create bpr
-prompt> rvm use <my-installed-ruby>@bpr
-prompt> bundle
+    prompt> rvm gemset create bpr
+    prompt> rvm use <my-installed-ruby>@bpr
+    prompt> bundle
 
 Next, if you wish to deploy to a device, you will have to change the
 Rakefile provisioning_profile setting to something valid on your system.
 
 To run the app in the simulator:
 
-prompt> rake
+    prompt> rake
 
 Or in the device:
 
-prompt> rake device
+    prompt> rake device
 
 CONTRIBUTIONS & CODE QUALITY
 ============================
