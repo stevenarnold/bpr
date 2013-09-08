@@ -227,7 +227,7 @@
 
 
 -(IBAction) viewDidLoad;
--(IBAction) doneWithHelp:(id) sender;
+-(IBAction) done_with_help;
 
 @end
 

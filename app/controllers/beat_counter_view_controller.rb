@@ -84,7 +84,7 @@ class BeatCounterViewController < UIViewController
     puts "beat viewDidLoad done"
   end
 
-  def textFieldDidEndEditing(field)
+  def handleNumericFieldInput(field)
     case field.tag
     when TIME_TO_RUN_BTN
       key = 'time_to_run'
@@ -93,12 +93,29 @@ class BeatCounterViewController < UIViewController
     else
       raise 'InvalidFieldEndedEditing'
     end
-    @delegate.system_settings.setFloat(field.text.to_f, forKey: key)
+    if field.text =~ /\A[0-9]*\.?[0-9]+\Z/
+      @delegate.system_settings.setFloat(field.text.to_f, forKey: key)
+      true
+    else
+      false
+    end
+  end
+
+  def textFieldDidEndEditing(field)
+    handleNumericFieldInput(field)
   end
 
   def doneWithNumberPad
-    @target.resignFirstResponder
-    @time_to_run.resignFirstResponder
+    if handleNumericFieldInput(@target)
+      @target.resignFirstResponder
+    else
+      App.alert("You must supply a numeric value for this field.")
+    end
+    if handleNumericFieldInput(@time_to_run)
+      @time_to_run.resignFirstResponder
+    else
+      App.alert("You must supply a numeric value for this field.")
+    end
   end
 
   def applicationWillTerminate(notification)
