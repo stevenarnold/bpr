@@ -161,6 +161,7 @@ class BeatCounterViewController < UIViewController
   end
 
   def start_timer
+    @act_in_avg, @act_out_avg = @act_out_avg, @act_in_avg if @act_in_avg > @act_out_avg
     @timer_started_at = Time.now
     @timer_vc ||= @sb.instantiateViewControllerWithIdentifier("timer")
     @timer_vc.target_bpm = @target.text.to_f
@@ -210,9 +211,9 @@ class BeatCounterViewController < UIViewController
     if still_collecting_initial_data
       puts "yep, still collecting initial data"
       interval = Time.now - @last_beat
-      interval = 5 if interval.class == Time
+      interval = 2.5 if interval.class == Time
       @last_beat = Time.now
-      puts "@act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}, @in_count = #{@in_count}, interval = #{interval}"
+      puts "@act_in_avg = #{@act_in_avg}, @act_out_avg = #{@act_out_avg}, @in_count = #{@in_count}, @out_count = #{@out_count}"
       if was_breathing_in
         @in_count += 1
         @act_in_avg = ((@act_in_avg * (@in_count - 1)) + interval) / @in_count
