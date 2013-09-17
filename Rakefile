@@ -11,7 +11,7 @@ require 'motion-cocoapods'
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'Blood Pressure Reducer'
-  app.version = '4.0'
+  app.version = '4.0.1'
   app.device_family = [:iphone, :ipad]
   app.identifier = 'com.arnold-software.BloodPressureReducer'
   app.frameworks += ['AVFoundation']
